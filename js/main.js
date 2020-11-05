@@ -59,7 +59,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 1500,
     fade: true,
-    autoplay: false,
+    autoplay: true,
       autoplaySpeed: 2000,
     cssEase: 'ease-in-out',
     nextArrow: '<div class="top__slider-next top__slider-arrow "></div>',
@@ -70,7 +70,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 1500,
  
-    autoplay: false,
+    autoplay: true,
       autoplaySpeed: 1600,
     cssEase: 'ease-in-out',
     nextArrow: '<div class="direction__slider-next direction__slider-arrow "></div>',
