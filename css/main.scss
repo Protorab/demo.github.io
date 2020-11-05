@@ -37,8 +37,7 @@
 @import url('slick-theme.min.css');
 @import url('slick.min.css');
 @import url('fonts.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 @import url('normalize.min.css');
 
 * {
@@ -505,6 +504,7 @@ html {
 
 
 body {
+ 
     font-family: 'Lato',
     sans-serif;
   margin: 0 auto;
@@ -513,8 +513,19 @@ body {
   color: rgba(0, 0, 0, 0.9);
   text-align: left;
   background: #E5E5E5;
+  position: relative;
 }
+.body{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  // display: none;
 
+}
 .__fixed {
   width: 100%;
   overflow: hidden;
@@ -626,16 +637,16 @@ li,
 label,
 pre {
 
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 145%;
 
   @media only screen and (max-width : 768px) {
-    font-size: 1.4rem;
+    font-size: 14px;
 
   }
 
   @media only screen and (max-width : 533px) {
-    font-size: 1.2rem;
+    font-size: 12px;
 
   }
 
@@ -645,18 +656,18 @@ p,
 .p {
     font-family: 'Lato',
     sans-serif;
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 167%;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.8);
 
   @media only screen and (max-width : 768px) {
-    font-size: 1.4rem;
+    font-size: 14px;
 
   }
 
   @media only screen and (max-width : 533px) {
-    font-size: 1.2rem;
+    font-size: 12px;
 
   }
 }
@@ -673,7 +684,7 @@ header {
   height: 150px;
   background: #fff;
   padding-top: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
   justify-content: space-between;
 
   @media only screen and (max-width : 800px) {
@@ -684,8 +695,14 @@ header {
 
 .title {
   @extend .t2;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
+letter-spacing: 0.03em;
+&-our_advantages{
+ margin-bottom: 5px;
+ grid-column: 1/-1;
 
+
+}
   &-footer {
     margin-bottom: 70px;
     @extend .t3;
@@ -777,7 +794,7 @@ header {
   align-items: center;
   position: relative;
   margin-bottom: 0;
-
+ 
   &-mobile {
     display: none;
   }
@@ -1235,10 +1252,14 @@ header {
   &-wrapper {
     height: 100%;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 185px;
     flex-direction: column;
     margin: 0 auto;
-
+ @media only screen and (max-width : 600px) {
+   justify-content: center;
+   padding-top: 0;
+ }
     @media only screen and (max-width : 600px) {
       max-width: 50%;
       margin: 0;
@@ -1265,8 +1286,9 @@ header {
     position: absolute;
     z-index: 5;
     left: 375px;
-    bottom: 100px;
+    bottom: 105px;
     cursor: pointer;
+    
     background-image: url('../img/top__slider-control.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -1417,7 +1439,7 @@ header {
 
 .advantages__top {
   z-index: 5;
-  margin-top: -100px;
+  margin-top: -90px;
   @extend .wrapper;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1427,11 +1449,17 @@ header {
   &-item {
     background: #fff;
     display: flex;
+    min-height: 285px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 40px 20px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+      @media only screen and (max-width : 800px) {
+    min-height: auto;
+
+      }
+
   }
 
   &-img {
@@ -1492,14 +1520,12 @@ header {
     @extend .title;
   }
 
-  p {
+  p {  
     line-height: 167%;
-    max-width: 470px;
-    letter-spacing: 0.03em;
-
+    max-width: 510px;
     margin-bottom: 30px;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 100;
 
     &:last-child {
       margin-bottom: 0;
@@ -1516,10 +1542,12 @@ header {
 
   }
 
-  @media screen and (max-width : 900px) and (orientation:landscape) {}
+  @media screen and (max-width : 900px) and (orientation:landscape) {
+     padding: 40px;
+     width: 100%;
+  }
 
-  padding: 40px;
-  width: 100%;
+ 
 }
 
 .info__img {
@@ -1545,6 +1573,7 @@ header {
 
 .direction__wrapper {
   flex-direction: column;
+ 
 }
 
 .direction__title {
@@ -1564,6 +1593,7 @@ header {
     padding-right: 15px;
     padding-bottom: 25px;
     padding-left: 40px;
+    min-height: 140px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1581,7 +1611,9 @@ header {
 
   &-title {
     width: 60%;
+    margin-top: 10px;
     @extend .t3;
+    font-weight: 500;
     font-family: 'Commissioner';
 
   }
@@ -1604,7 +1636,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &-link {
@@ -1636,6 +1668,9 @@ header {
   &-title {
     @extend .t2;
     width: 30%;
+    letter-spacing: 0.03em;
+    line-height: 143%;
+    /* or 143% */
   }
 
   justify-content: space-between;
@@ -1643,16 +1678,13 @@ header {
   &-text {
     line-height: 167%;
 
-    width: 66%;
+    width: 65.5%;
     display: flex;
-    flex-direction: column;
-    font-family: Lato;
-    font-weight: 300;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;  
 
     p {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+ 
 
       &:last-child {
         margin-bottom: 0;
@@ -1847,6 +1879,7 @@ header {
 
   &-title {
     @extend .t2;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #DEC377;
@@ -1854,6 +1887,8 @@ header {
   }
 
   &-subtitle {
+    @extend .p;
+font-weight: normal;
     color: rgba(0, 0, 0, 0.5);
   }
 
@@ -1872,11 +1907,13 @@ header {
     color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 12px;
   }
 
   &-arrow {
     position: absolute;
     z-index: 5;
+
     right: 60px;
     bottom: -70px;
     cursor: pointer;
@@ -1994,6 +2031,7 @@ header {
   justify-content: space-between;
 
   &-item {
+    min-height: 305px;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -2018,6 +2056,8 @@ header {
     }
 
     &:nth-child(3n) {
+    min-height: 185px;
+
       grid-column: 1/-1;
       flex-direction: row;
       align-items: center;
@@ -2028,6 +2068,7 @@ header {
         width: 24%;
 
         @media only screen and (max-width : 600px) {
+          
           width: 100%;
           margin-bottom: 35px;
         }
@@ -2045,12 +2086,15 @@ header {
 
       @media only screen and (max-width : 600px) {
         flex-direction: column;
+    min-height: auto;
+
       }
 
     }
 
     @media only screen and (max-width : 600px) {
       padding: 35px;
+    min-height: auto;
 
     }
 
@@ -2115,7 +2159,7 @@ header {
       }
 
       &:nth-child(1) {
-        width: 58.7%;
+        width: 57.5%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2130,7 +2174,7 @@ header {
       }
 
       &:nth-child(2) {
-        width: 38.7%;
+        width: 40%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2152,7 +2196,7 @@ header {
       }
 
       &:nth-child(1) {
-        width: 38.7%;
+        width: 40.5%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2167,7 +2211,7 @@ header {
       }
 
       &:nth-child(2) {
-        width: 58.7%;
+        width: 57.25%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2190,7 +2234,7 @@ header {
       }
 
       &:nth-child(1) {
-        width: 48.7%;
+        width: 48.9%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2205,7 +2249,7 @@ header {
       }
 
       &:nth-child(2) {
-        width: 48.7%;
+        width: 48.5%;
 
         @media only screen and (max-width : 800px) {
           width: 100%;
@@ -2403,7 +2447,7 @@ header {
   padding-top: 80px;
 
   @media only screen and (max-width : 600px) {
-    padding-top: 0;
+    // padding-top: 0;
   }
 
 }
@@ -2411,10 +2455,16 @@ header {
 .our_advantages {
   @extend .advantages__top;
   margin-top: 0;
+  padding-top: 0;
   margin-bottom: 40px;
 
   &-item {
     @extend .advantages__top-item;
+    min-height: 335px;
+      @media only screen and (max-width : 800px) {
+        min-height: auto;
+      }
+
   }
 
   &-img {
@@ -2509,6 +2559,7 @@ header {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
+  width: 48%;
 
   p {
     font-size: 12px;
@@ -2530,6 +2581,9 @@ header {
   @media only screen and (max-width : 370px) {
     padding: 25px;
 
+  }
+  @media only screen and (max-width : 800px) {
+    width: 100%;
   }
 
 }
