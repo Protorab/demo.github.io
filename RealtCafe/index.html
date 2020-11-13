@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="url.site">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http(s)://url.site/">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="img/og__img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7740d6de-8a54-4298-b4eb-a502ab955dc2&lang=ru_RU"
+      type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <title>РиелтКафе</title>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper wrapper-between">
+        <a href="#" class="logo">
+          <div class="logo-img">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="logo-text"><span>РиелтКафе</span><span>Агентство недвижимости</span></div>
+        </a>
+        <div class="header__items">
+          <div class="header__item ">
+            <div class="burger__menu show__item">
+              <span>
+
+              </span>
+            </div>
+
+            <nav class="menu header__item-content">
+              <a href="#about" class="menu__item">О нас</a>
+              <a href="#service" class="menu__item">Услуги</a>
+              <a href="#team" class="menu__item">Команда</a>
+              <a href="#certificates" class="menu__item">Сертификаты</a>
+              <a href="#reviews" class="menu__item">Отзывы</a>
+              <a href="#contacts" class="menu__item">Контакты</a>
+            </nav>
+          </div>
+          <div class="header__item phone__item">
+            <div class="phone__show"><img src="img/icon__phone.svg" alt=""></div>
+
+            <div class="phone__content header__item-content">
+              <a href="" class="header__item-link show__form">заказать звонок</a>
+              <span></span>
+              <div class="phones">
+                <a href="tel:+375 33 699-79-74">+375 33 699-79-74</a>
+                <a href="tel:+375 17 375-79-79">+375 17 375-79-79</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="section top__section">
+        <img class="header__img" src="img/main_overley.png" alt="">
+        <div class="top__slider">
+          <img src="img/top__slider/img__1.png" alt="">
+          <img src="img/top__slider/img__2.png" alt="">
+          <img src="img/top__slider/img__3.png" alt="">
+          <img src="img/top__slider/img__4.png" alt="">
+        </div>
+        <div class="wrapper top__wrapper">
+          <h1 class="top__title">Найдём кратчайший <br>
+            путь к сделке!</h1>
+          <form class="top__form" action="">
+            <div class="top__form-subject">
+              <a href="#" class="subject__item __clicked">продать</a>
+              <a href="#" class="subject__item">купить</a>
+              <a href="#" class="subject__item">обменять</a>
+            </div>
+            <div class="top__form-question">
+              <label for="top__address" class="form__input form__input-top">
+                <span class="question__number">
+                  <span>1</span>
+                  <span>/</span>
+                  <span>3</span>
+                  <span class="next__question"></span>
+                </span>
+                <input id="top__address" placeholder="Введите адрес объекта" name="Адрес объекта" type="text">
+                <span class="warning"><i class="fas fa-exclamation-circle"></i> Заполните это поле</span>
+                <span class="question__arrow next__question"><img src="img/icon__arrow.svg" alt=""></span>
+              </label>
+              <a href="#" class="btn btn-top next__question">далее</a>
+            </div>
+            <div class="top__form-question __hide">
+              <label for="top__name" class="form__input form__input-top">
+                <span class="question__number">
+                  <span>2</span>
+                  <span>/</span>
+                  <span>3</span>
+                  <span class="next__question"></span>
+                </span>
+                <input id="top__name" placeholder="Ваше имя" name="Имя" type="text">
+                <span class="warning"><i class="fas fa-exclamation-circle"></i> Заполните это поле</span>
+                <span class="question__arrow next__question"><img src="img/icon__arrow.svg" alt=""></span>
+              </label>
+              <a href="#" class="btn btn-top next__question">далее</a>
+            </div>
+            <div class="top__form-question __hide">
+              <label for="top__phone" class="form__input form__input-top">
+                <span class="question__number">
+                  <span>3</span>
+                  <span>/</span>
+                  <span>3</span>
+                  <span class="next__question"></span>
+                </span>
+                <input required id="top__phone" placeholder="Телефон" class="telephone" name="Телефон" type="text">
+                <span class="warning"><i class="fas fa-exclamation-circle"></i> Заполните это поле</span>
+                <span class="question__arrow next__question"><img src="img/icon__arrow.svg" alt=""></span>
+              </label>
+              <label for="" class="btn btn-top top__send">далее</label>
+            </div>
+            <input type="hidden" name="project_name" value="Site Name">
+            <input type="hidden" name="admin_email" value="admin@mail.com">
+            <input type="hidden" class="top__subject" name="form_subject" value="Хочу продать">
+            <input id="top__submit" type="submit" value="">
+          </form>
+        </div>
+      </section>
+
+      <section id="service" class="section service__section">
+        <div class="wrapper title__wrapper title__wrapper-service">
+          <div class="title__section title__section-service">Услуги</div>
+          <div class="section__subtitle">операции с жильем</div>
+        </div>
+        <div class="grid wrapper">
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__1.png" alt="Купить"></div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Купить</div>
+              <p>Поможем подобрать недвижимость в Минске <br> или пригороде</p>
+            </div>
+          </div>
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__2.png"
+                alt="Проверить недвижимость"></div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Проверить недвижимость</div>
+              <p>Поможем купить квартиру с чистой юридической историей</p>
+            </div>
+          </div>
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__3.png" alt="Продать"></div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Продать</div>
+              <p>Поможем вам быстро найти покупателя и получить максимальную цену</p>
+            </div>
+          </div>
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__4.png"
+                alt="Оформление сделки "></div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Оформление сделки</div>
+              <p>Поможем правильно и безопасно совершить сделку, если вы уже нашли подходящую квартиру</p>
+            </div>
+          </div>
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__5.png" alt="Обменять"></div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Обменять</div>
+              <p>Поможем в продаже вашей квартиры и покупке встречной</p>
+            </div>
+          </div>
+          <div class="grid__item grid__item-service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/service/icon__6.png" alt="Срочный выкуп">
+            </div>
+            <div class="grid__item-text">
+              <div class="grid__item-title grid__item-service__title">Срочный выкуп</div>
+              <p>Поможем получить деньги от продажи вашей недвижимости в течение нескольких дней после обращения в
+                компанию</p>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper title__wrapper">
+          <div class="title__section title__section-free__service">Бесплатные услуги</div>
+        </div>
+        <div class="grid wrapper">
+          <div class="grid__item grid__item-free__service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/free__service/icon__1.svg"
+                alt="Онлайн консультации">
+            </div>
+            <div class="grid__item-text">
+              <div class="grid__item-title">Онлайн консультации</div>
+
+            </div>
+          </div>
+          <div class="grid__item grid__item-free__service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/free__service/icon__2.svg"
+                alt="Выезд риэлтера">
+            </div>
+            <div class="grid__item-text">
+              <div class="grid__item-title">Выезд риэлтера</div>
+
+            </div>
+          </div>
+          <div class="grid__item grid__item-free__service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/free__service/icon__3.svg"
+                alt="Бесплатная оценка">
+            </div>
+            <div class="grid__item-text">
+              <div class="grid__item-title">Бесплатная оценка</div>
+
+            </div>
+          </div>
+          <div class="grid__item grid__item-free__service">
+            <div class="grid__item-img grid__item-service__img"><img src="img/free__service/icon__4.svg"
+                alt="Покупка новостройки ">
+            </div>
+            <div class="grid__item-text">
+              <div class="grid__item-title">Покупка новостройки</div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="find_out" class="section find_out__section">
+        <img src="img/find_out_overley.png" alt="" class="bg__section bg__section-find_out__bg">
+        <div class="find_out__wrapper wrapper">
+          <div class="find_out__content">
+            <h3 class="find_out__title">
+              Узнайте стоимость своей
+              недвижимости прямо сейчас
+            </h3>
+            <div class="find_out__subtitle">и получите консультацию риэлтера</div>
+            <a href="#find_out" class="btn btn-find_out check__show">Узнать стоимость</a>
+          </div>
+        </div>
+      </section>
+      <div id="popup__check" class="popup popup__check">
+        <div class="popup-bg"></div>
+        <form action="" class="check__popup">
+          <div class="popup__close"><span></span></div>
+          <div class="check__number"><span class="check__number-text">вопрос</span><span
+              class="current__number">1</span><span>/</span><span class="all__number">4</span>
+          </div>
+          <h5 class="check__popup-title">Узнайте стоимость своей
+            недвижимости прямо сейчас</h5>
+          <div class="check__popup-question">
+            <div class="question type__housing">
+              <div class="check__popup-subtitle">Выберите тип жилья</div>
+              <div class="check__grid">
+                <a data-question="number__rooms" data-allnumber="4" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Вторичная</a>
+                <a data-question="number__rooms" data-allnumber="4" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Новостройка</a>
+                <a data-question="suburban" data-allnumber="3" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Загородная</a>
+                <a data-question="commercial" data-allnumber="3" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Коммерческая</a>
+                <input type="hidden" name="Тип жилья" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question number__rooms __hide">
+
+
+              <div class="check__popup-subtitle">Выберите количество комнат</div>
+              <div class="check__grid check__grid-number__rooms">
+                <a data-question="area" href="#popup__check" class="check__grid-item check__grid-number__item">1</a>
+                <a data-question="area" href="#popup__check" class="check__grid-item check__grid-number__item">2</a>
+                <a data-question="area" href="#popup__check" class="check__grid-item check__grid-number__item">3</a>
+                <a data-question="area" href="#popup__check" class="check__grid-item check__grid-number__item">4+</a>
+                <input type="hidden" name="Количество комнат" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question area __hide">
+
+
+              <div class="check__popup-subtitle">Выберите район</div>
+              <div class="check__grid check__grid-area">
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Заводской</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Октябрьский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Советский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Ленинский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Партизанский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Фрунзенский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Московский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Первомайский</a>
+                <a data-question="repairs" href="#popup__check"
+                  class="check__grid-item check__grid-area__item">Центральный</a>
+                <input type="hidden" name="Район" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question repairs __hide">
+
+
+              <div class="check__popup-subtitle">Ремонт</div>
+              <div class="check__grid check__grid-repairs">
+                <a data-question="send" href="#popup__check"
+                  class="check__grid-item check__grid-repairs__item">Отличный</a>
+                <a data-question="send" href="#popup__check"
+                  class="check__grid-item check__grid-repairs__item">Строительная отделка</a>
+                <a data-question="send" href="#popup__check"
+                  class="check__grid-item check__grid-repairs__item">Удовлетворительный</a>
+                <a data-question="send" href="#popup__check"
+                  class="check__grid-item check__grid-repairs__item">Нормальный</a>
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-repairs__item">Без
+                  отделки</a>
+                <input type="hidden" name="Ремонт" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question suburban __hide">
+              <div class="check__popup-subtitle">Вид объекта</div>
+              <div class="check__grid">
+                <a data-question="location" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Земельный участок</a>
+                <a data-question="location" href="#popup__check" class="check__grid-item check__grid-item__type">Дома и
+                  коттеджи</a>
+                <a data-question="location" href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Дачи</a>
+                <a data-question="location" number__rooms href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Таунхаусы</a>
+                <input type="hidden" name="Тип жилья" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question location __hide">
+              <div class="check__popup-subtitle">Расположение</div>
+              <div class="check__grid">
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__type">Минск</a>
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__type">до 10 км от
+                  МКАД</a>
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__type">до 30 км от
+                  МКАД</a>
+                <a data-question="send" number__rooms href="#popup__check"
+                  class="check__grid-item check__grid-item__type">до 50 км от МКАД</a>
+                <input type="hidden" name="Расположение" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question commercial __hide">
+              <div class="check__popup-subtitle">Вид объекта</div>
+              <div class="check__grid">
+                <a data-question="square" href="#popup__check" class="check__grid-item check__grid-item__type">Офис</a>
+                <a data-question="square" href="#popup__check" class="check__grid-item check__grid-item__type">Склад</a>
+                <a data-question="square" href="#popup__check" class="check__grid-item check__grid-item__type">Торговое
+                  помещение</a>
+                <a data-question="square" number__rooms href="#popup__check"
+                  class="check__grid-item check__grid-item__type">Свободное назначение</a>
+                <input type="hidden" name="Вид объекта" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question square __hide">
+              <div class="check__popup-subtitle">Площадь</div>
+              <div class="check__grid check__grid-area">
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__square">До 50
+                  м2</a>
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__square">до 100
+                  м2</a>
+                <a data-question="send" href="#popup__check" class="check__grid-item check__grid-item__square">100 и
+                  более</a>
+
+                <input type="hidden" name="Вид объекта" class="check__popup-input" value="">
+              </div>
+            </div>
+            <div class="question send __hide">
+
+
+              <div class="check__popup-subtitle">Оставьте свои контактные данные и риелтор свяжется с вами</div>
+              <input name="Имя" required placeholder="Имя" type="text" class="check__popup-input">
+              <input name="Телефон" required placeholder="Телефон" type="text" class="check__popup-input telephone">
+              <input id="check__popup-submit" type="submit" value="">
+              <label class="btn btn-check__popup" for="check__popup-submit">Перезвоните мне</label>
+            </div>
+          </div>
+          <input type="hidden" name="project_name" value="Site Name">
+          <input type="hidden" name="admin_email" value="admin@mail.com">
+          <input type="hidden" class="" name="form_subject" value="Хочу Узнать стоимость!">
+        </form>
+      </div>
+      <section id="about" class="section enjoy__section">
+        <div class="wrapper title__wrapper">
+          <div class="title__section title__section-enjoy">Почему вы останетесь довольны?</div>
+        </div>
+        <div class="wrapper enjoy__grid">
+          <div class="enjoy__item">
+            <div class="enjoy__item-img">
+              <img src="img/enjoy__img.png" alt="">
+            </div>
+            <div class="enjoy__item-text">Наши услуги всегда окупаются</div>
+          </div>
+          <div class="enjoy__item">
+            <div class="enjoy__item-img">
+              <img src="img/enjoy__img.png" alt="">
+            </div>
+            <div class="enjoy__item-text">Постоянная бесплатная юридическая поддержка</div>
+          </div>
+          <div class="enjoy__item">
+            <div class="enjoy__item-img">
+              <img src="img/enjoy__img.png" alt="">
+            </div>
+            <div class="enjoy__item-text">100% безопасность, все сделки застрахованы</div>
+          </div>
+          <div class="enjoy__item">
+            <div class="enjoy__item-img">
+              <img src="img/enjoy__img.png" alt="">
+            </div>
+            <div class="enjoy__item-text">Оплата за результат: вы платите только за положительный результат в день
+              сделки</div>
+          </div>
+        </div>
+
+
+        <div class="section buy__section">
+          <img src="img/sould_overley.png" alt="Покупая с нами" class="overlay__section overlay__section-buy">
+          <div class="wrapper title__wrapper  ">
+            <div class="title__section title__section-buy">Покупая с нами</div>
+          </div>
+          <div class="wrapper">
+            <div class="buy__grid">
+              <div class="buy__grid-item">
+                <p>Вы сможете увидеть в несколько раз больше объектов, чем самостоятельно за то же время.
+                  Покажем те объекты, которых нет еще в рекламе. Вам будет из чего выбирать!</p>
+              </div>
+              <div class="buy__grid-item">
+                <p>Вы сможете дешевле купить квартиру. Мы знаем, сколько реально может стоить конкретная квартира, а
+                  самое
+                  главное – как
+                  эту скидку получить. Экономить деньги своим клиентам – наша работа!</p>
+              </div>
+              <div class="buy__grid-item">
+                <p>Вы сможете быть спокойны за юридическую чистоту сделки.
+                  Мы проверим «от и до» любую недвижимость до того, как вы ее купите.</p>
+              </div>
+              <div class="buy__grid-item">
+                <p>Вы можете заказать услугу подбора недвижимости целиком или отдельно заказать юридическую проверку и
+                  сопровождение
+                  сделки.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <a href="#" class="btn btn-buy show__form">Купить</a>
+          </div>
+          <div class="section__img section__img-buy"><img src="img/buy_with_us.jpg" alt=""></div>
+        </div>
+
+        <div class="section sould__section">
+          <img src="img/sould_overley.png" alt="продавая с нами" class="overlay__section overlay__section-sould">
+          <div class="wrapper title__wrapper  ">
+            <div class="title__section title__section-sould">продавая с нами</div>
+          </div>
+          <div class="wrapper grid__wrapper">
+            <div class="sould__grid wrapper">
+              <div class="sould__grid-item">
+                <p>Вы сможете увидеть в несколько раз больше объектов, чем самостоятельно за то же время.
+                  Покажем те объекты, которых нет еще в рекламе. Вам будет из чего выбирать!</p>
+              </div>
+              <div class="sould__grid-item">
+                <p>Вы сможете дешевле купить квартиру. Мы знаем, сколько реально может стоить конкретная квартира, а
+                  самое
+                  главное – как
+                  эту скидку получить. Экономить деньги своим клиентам – наша работа!</p>
+              </div>
+              <div class="sould__grid-item">
+                <p>Вы сможете быть спокойны за юридическую чистоту сделки.
+                  Мы проверим «от и до» любую недвижимость до того, как вы ее купите.</p>
+              </div>
+              <div class="sould__grid-item">
+                <p>Вы можете заказать услугу подбора недвижимости целиком или отдельно заказать юридическую проверку и
+                  сопровождение
+                  сделки.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper btn__wrapper">
+            <a href="#" class="btn btn-sould show__form">Продать</a>
+          </div>
+          <div class="section__img section__img-sould"><img src="img/sould_with_us.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="team" class="section team__section">
+        <div class="team__wrapper wrapper">
+          <div class="team__content">
+            <div class="title__section title__section-team">Команда</div>
+            <p>
+              Мы- команда Центра недвижимости «РиелтКафе»!
+            </p>
+            <p>К нам обращаются люди, которые всерьез намерены решить свой жилищный вопрос. Ежедневно мы проводим обмены
+              старого жилья
+              на новое, квартир на дома, а также помогаем с нуля приобретать недвижимость.</p>
+            <p>
+              А еще «РиелтКафе» – это Люди.
+            </p>
+            <p>
+              Трудолюбивые, порядочные, профессиональные.
+            </p>
+            <p>
+              Наша миссия - это выгодные сделки с недвижимостью для своих клиентов.
+            </p>
+            <p>
+              Удовольствие Вашей новой жизни – это результат нашей слаженной работы!
+            </p>
+          </div>
+          <div class="team__img">
+            <img src="img/team.jpg" alt="">
+          </div>
+        </div>
+        <div class="wrapper team__slider">
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__1.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__1.png" alt="Директор">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Малащенко Наталья
+                Рифатовна</div>
+              <div class="team__slider-name">Директор</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__2.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__2.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Гросс Екатерина</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__3.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__3.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Алексиевич Сергей</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__4.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__4.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Кучерова Ирина</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__5.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__5.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Татаринов Игорь</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__6.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__6.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Гущинская Юлия</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__7.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__7.png" alt="Агент по недвижимости">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Шимаковская Янина</div>
+              <div class="team__slider-name">Агент по недвижимости</div>
+            </div>
+          </div>
+          <div class="team__slider-item">
+            <a href="img/team__slider/img__8.png" class="popup__img team__slider-img">
+              <img src="img/team__slider/img__8.png" alt="Шалахова Алеся Евгеньевна">
+            </a>
+            <div class="team__slider-text">
+              <div class="team__slider-position">Шалахова Алеся Евгеньевна</div>
+              <div class="team__slider-name">Риелтер</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="certificates" class="section certificates__section">
+        <div class="wrapper title__wrapper  ">
+          <div class="title__section title__section-certificates">Сертификаты</div>
+        </div>
+        <div class="wrapper certificates certificates__gallery">
+          <a title="сертификат 1" href="img/certificates/img__1.jpg" class="certificates__item"><img
+              src="img/certificates/img__1.jpg" alt=""></a>
+          <a title="сертификат 2" href="img/certificates/img__2.jpg" class="certificates__item"><img
+              src="img/certificates/img__2.jpg" alt=""></a>
+          <a title="сертификат 3" href="img/certificates/img__3.jpg" class="certificates__item"><img
+              src="img/certificates/img__3.jpg" alt=""></a>
+          <a title="сертификат 4" href="img/certificates/img__4.jpg" class="certificates__item"><img
+              src="img/certificates/img__4.jpg" alt=""></a>
+        </div>
+      </section>
+
+      <section id="reviews" class="section reviews__section">
+        <div class="wrapper title__wrapper title__wrapper-reviews">
+          <div class="title__section title__section-reviews">Отзывы</div>
+          <a target="_blank" href="https://otzyvy.by/agentstva_nedvigimosti/54995.html" class="btn btn-reviews">смотреть
+            все отзывы</a>
+        </div>
+        <div class="wrapper reviews__wrapper">
+          <div class="reviews__slider">
+            <div class="">
+              <div class="review">
+                <div class="reviews__slider-top__info">
+
+                  <div class="reviews__name">Евгений</div>
+                  <div class="reviews__date">15.09.2020 17:10</div>
+
+
+                </div>
+                <div class="reviews__text">
+                  <p>Обращались в «РиелтКафе» уже дважды. До этого опыта в делах купли-продажи квартир небыло.</p>
+                  <p>Первый раз сам покупал квартиру,второй раз тетя продавала.</p>
+                  <p>Вообще не любитель писать отзывы,но работа данного агенства сподвигла! Хочу отметить
+                    профессиональный,компетентный
+                    подход клиентам. С продажей тетиной квартиры было много юридических нюансов,но грамотный
+                    подход,человеческое отношение
+                    Натальи Рифатовна помогли нам все сделать быстро и грамотно.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="">
+              <div class="review">
+                <div class="reviews__slider-top__info">
+                  <div class="reviews__name">Евгений</div>
+                  <div class="reviews__date">15.09.2020 17:10</div>
+                </div>
+                <div class="reviews__text">
+                  <p>Обращались в «РиелтКафе» уже дважды. До этого опыта в делах купли-продажи квартир небыло.</p>
+                  <p>Первый раз сам покупал квартиру,второй раз тетя продавала.</p>
+                  <p>Вообще не любитель писать отзывы,но работа данного агенства сподвигла! Хочу отметить
+                    профессиональный,компетентный
+                    подход клиентам. С продажей тетиной квартиры было много юридических нюансов,но грамотный
+                    подход,человеческое отношение
+                    Натальи Рифатовна помогли нам все сделать быстро и грамотно.</p>
+                  <p>Вообще не любитель писать отзывы,но работа данного агенства сподвигла! Хочу отметить
+                    профессиональный,компетентный
+                    подход клиентам. С продажей тетиной квартиры было много юридических нюансов,но грамотный
+                    подход,человеческое отношение
+                    Натальи Рифатовна помогли нам все сделать быстро и грамотно.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="">
+              <div class="review">
+                <div class="reviews__slider-top__info">
+
+                  <div class="reviews__name">Евгений</div>
+                  <div class="reviews__date">15.09.2020 17:10</div>
+
+
+                </div>
+                <div class="reviews__text">
+                  <p>Обращались в «РиелтКафе» уже дважды. До этого опыта в делах купли-продажи квартир небыло.</p>
+                  <p>Первый раз сам покупал квартиру,второй раз тетя продавала.</p>
+                  <p>Вообще не любитель писать отзывы,но работа данного агенства сподвигла! Хочу отметить
+                    профессиональный,компетентный
+                    подход клиентам. С продажей тетиной квартиры было много юридических нюансов,но грамотный
+                    подход,человеческое отношение
+                    Натальи Рифатовна помогли нам все сделать быстро и грамотно.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="reviews__img">
+            <img src="img/reviews__img.jpg" alt=""></div>
+        </div>
+      </section>
+
+      <section class="section question__section">
+        <form action="" class="wrapper question__wrapper">
+          <div class="title__section title__section-question">Ответим на ваши вопросы</div>
+          <div class="question__subtitle">оставьте телефон и мы свяжемся в течение 15 минут</div>
+          <div class="question__inputs">
+            <input type="hidden" name="project_name" value="Site Name">
+            <input type="hidden" name="admin_email" value="admin@mail.com">
+            <input type="hidden" name="form_subject" value="Хочу чтобы мне перезвонили!">
+            <input required name="Имя" placeholder="Имя" type="text" class="question__input">
+            <input required name="Телефон" placeholder="Телефон" type="tel" class="question__input telephone">
+            <input type="submit" id="question__submit" value="">
+            <label for="question__submit" class="btn btn-question__btn">Перезвоните мне</label>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <div class="wrapper contacts__wrapper">
+        <div class="contact__content">
+          <div class="title__section title__section-contacts">Контакты</div>
+          <p class="contact__address">Романовская слобода, 3А (метро НЕМИГА)</p>
+          <p class="contact__time"><strong>Режим работы:</strong> 9.00 - 21.00</p>
+          <a href="tel:+375 33 699-79-74" class="contact__phone">+375 33 699-79-74</a>
+          <a href="tel:+375 17 375-79-79" class="contact__phone">+375 17 375-79-79</a>
+          <a href="mailto:caferealt@gmail.com" class="contact__mail">caferealt@gmail.com</a>
+          <ul class="contact__social">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/realt_cafe/?hl=ru">
+                <img class="social__icon" src="img/social/icon__1.svg" alt="">
+                <img class="social__icon social__icon-hover" src="img/social/icon__1-hover.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.youtube.com/channel/UCbqLmX224Gj8ao98ELDnFOw">
+                <img class="social__icon" src="img/social/icon__2.svg" alt="">
+                <img class="social__icon social__icon-hover" src="img/social/icon__2-hover.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="map" class="contact__map"></div>
+      </div>
+      <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init() {
+          // Создание карты.
+          var centerMap = [53.902093, 27.547009];
+          if (($(window).width() <= 1025) && ($(window).width() > 600)) {
+            centerMap = [53.902093, 27.547009];
+
+          } else {
+
+          }
+          centerMap = [53.902093, 27.547009];
+          var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+
+            center: centerMap,
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 16,
+            controls: []
+          });
+          var myPlacemark = new ymaps.Placemark([53.902093, 27.547009], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/pin_icon.png',
+            iconImageSize: [45, 45],
+            iconImageOffset: [-10, -27]
+          });
+          myMap.geoObjects
+            .add(myPlacemark);
+          myMap.behaviors.disable('scrollZoom');
+        }
+      </script>
+      <a href="http://" target="_blank" rel="noopener noreferrer">Разработано: Good Tech</a>
+    </footer>
+    <div class="popup popup__form">
+      <div class="popup-bg"></div>
+      <form action="" class="form__popup">
+        <input type="hidden" name="project_name" value="Site Name">
+        <input type="hidden" name="admin_email" value="admin@mail.com">
+        <input type="hidden" class="" name="form_subject" value="Хочу чтобы мне перезвонили">
+        <div class="popup__close"><span></span></div>
+        <div class="form__popup-title">Заказать звонок</div>
+        <div class="form__popup-subtitle">оставьте телефон и мы свяжемся в течение 15 минут</div>
+        <input required placeholder="Имя" type="text" class="form__popup-input">
+        <input required placeholder="тЕЛЕФОН" type="tel" class="telephone form__popup-input">
+        <input type="submit" value="" id="form__popup-submit">
+        <label for="form__popup-submit" class="btn btn-popup__btn">Отправить</label>
+      </form>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/e272fd0660.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "cSpell.language": "en,ru,ru-RU",
+  "cSpell.enableFiletypes": [
+    "!asciidoc",
+    "!c",
+    "!cpp",
+    "!csharp",
+    "!go",
+    "!handlebars",
+    "!haskell",
+    "!jade",
+    "!java",
+    "!jsonc",
+    "!markdown",
+    "!pug",
+    "!python",
+    "!restructuredtext",
+    "!rust",
+    "!scala",
+    "!yaml",
+    "!yml",
+    "html",
+    "sass"
+  ],
+  "cSpell.words": [
+    "photogallery"
+  ]
+}
