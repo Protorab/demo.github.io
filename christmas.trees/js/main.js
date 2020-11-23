@@ -14901,6 +14901,13 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     infinite: true,
+    draggable: true,
+    touchMove: true,
+    swipe: true,
+    touchThreshold: 100,
+
+    autoplaySpeed: 2000,
+    speed: 800,
     nextArrow:
       '<div class="menu__slider-next menu__slider-arrow "><span> </span><span></span></div>',
     prevArrow:
@@ -14909,6 +14916,7 @@ $(document).ready(function () {
       {
         breakpoint: 800,
         settings: {
+          autoplay: true,
           slidesToShow: 3,
           slidesToScroll: 1,
         },
@@ -14925,6 +14933,10 @@ $(document).ready(function () {
   $(".reviews__slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    draggable: true,
+    touchMove: true,
+    swipe: true,
+    touchThreshold: 100,
     fade: true,
     dots: true,
     dotsClass: "reviews__slider-dots",
