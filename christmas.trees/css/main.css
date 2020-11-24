@@ -4663,11 +4663,18 @@ section div picture {
   margin-bottom: 30px
 }
 .secondary__section {
-  padding-top: 20px;
-  padding-bottom: 135px
+  padding-top: 120px;
+  margin-top: -100px;
+  margin-bottom: -50px;
+  padding-bottom: 135px;
+  z-index: 1
 }
 .secondary__section-img {
   bottom: -1px
+}
+.third__section {
+  padding-top: 70px;
+  margin-top: -100px
 }
 .title__wrapper {
   flex-direction: column;
@@ -4920,6 +4927,7 @@ section div picture {
 }
 .about__section {
   padding-bottom: 180px;
+  margin-bottom: -50px;
   padding-top: 140px
 }
 .about__section-img {
@@ -5571,7 +5579,6 @@ section div picture {
     bottom: -31px
   }
   .secondary__section {
-    padding-top: 10px;
     padding-bottom: 55px
   }
   .title__wrapper {

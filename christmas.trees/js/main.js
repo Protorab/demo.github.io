@@ -15029,7 +15029,7 @@ $(document).ready(function () {
 function documentReady() {
   var MAX_SNOW = 200;
   var MAX_SNOW_SIZE = 7;
-  var MAX_SNOW_SPEED = 1;
+  var MAX_SNOW_SPEED = 2;
 
   snowStart();
 
