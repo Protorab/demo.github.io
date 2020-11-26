@@ -23,7 +23,7 @@
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=c0f6f5c0-aaee-4a96-ad79-ebd980c3424d&lang=ru_RU&scroll=false&mode=release"
       type="text/javascript">
-      </script>
+    </script>
 
     <link rel="stylesheet" href="css/main.min.css">
     <title>Корпусная, встроенная мебель под заказ в Минске, купить мебель на заказ</title>
@@ -39,7 +39,7 @@
 
 
     <header class="header">
-      <div class="container d-flex-row">
+      <div class="header__container container">
         <a href="index.html#" class="logo">
           <img src="img/logo.gif" loading="lazy" alt="logo" title="">
         </a>
@@ -87,6 +87,17 @@
           <div class="bar bar_2"></div>
           <div class="bar bar_3"></div>
         </div>
+        <!-- <span class="find__form">
+          <form action="">
+            <input placeholder="Поиск" required type="text" class="find__form-input">
+            <input id="find__form-submit" type="submit" value="">
+            <label class="find__form-label" for="find__form-submit">Найти</label>
+          </form>
+          <span class="find__form-icon">
+            <img src="img/icon/icon__search.svg" alt="">
+            </ы>
+          </span>
+        </span> -->
       </div>
     </header>
 
@@ -1217,8 +1228,8 @@
     <input type="hidden" name="project_name" value="">
     <input type="hidden" name="admin_email" value="acnt4wk@gmail.com">
     <input type="hidden" id="form__subject" name="form_subject" value="">
-    <input type="text" name="Имя" id="poupup_name" class="form_input _poupup_input" required placeholder="Имя">
-    <input type="tel" class="telephone phone form_input _poupup_input" name="Телефон" id="poupup_phone" required
+    <input type="text" name="Имя" id="poupup_name" class="form__input _poupup_input" required placeholder="Имя">
+    <input type="tel" class="telephone phone form__input _poupup_input" name="Телефон" id="poupup_phone" required
       placeholder="Телефон">
     <textarea name="Сообщение" id="poupup_msg" class="hide_elem" cols="30" rows="10"></textarea>
     <input id="poupup_submit" type="submit">
@@ -1307,9 +1318,9 @@ animate__fadeIn">
     <div class="calculate__col wow animate__animated animate__fadeInRight">
       <form action="" class="form form__submit form__calculation">
         <h3 class="h3 questions_title _thx_title">Спасибо</h3>
-        <input type="text" name="Имя" id="calculation__name" class="form_input _questions_input" required
+        <input type="text" name="Имя" id="calculation__name" class="form__input _questions_input" required
           placeholder="Имя">
-        <input type="tel" class="telephone phone form_input _questions_input" name="Телефон" id="calculation__phone"
+        <input type="tel" class="telephone phone form__input _questions_input" name="Телефон" id="calculation__phone"
           required placeholder="Телефон">
         <label class="custom__file" for="photo">
           <span class="custom__file-label ">Выберите изображение:</span>
@@ -1598,8 +1609,8 @@ animate__fadeIn delay-06">
     <form action="" class="form questions_form form__submit">
       <h3 class="h3 questions_title _def_title">Остались вопросы?</h3>
       <h3 class="h3 questions_title _thx_title">Остались вопросы?</h3>
-      <input type="text" name="Имя" id="question_name" class="form_input _questions_input" required placeholder="Имя">
-      <input type="tel" class="telephone phone form_input _questions_input" name="Телефон" id="phone" required
+      <input type="text" name="Имя" id="question_name" class="form__input _questions_input" required placeholder="Имя">
+      <input type="tel" class="telephone phone form__input _questions_input" name="Телефон" id="phone" required
         placeholder="Телефон">
       <textarea name="Сообщение" id="question_msg" class="hide_elem" cols="30" rows="10"></textarea>
       <input id="questions_submit" type="submit">
