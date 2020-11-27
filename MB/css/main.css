@@ -4117,7 +4117,7 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 84.6875%;
+  max-width: 89.89583%;
   width: 100%
 }
 .d-iblock {
@@ -4301,6 +4301,7 @@ section {
   display: none
 }
 ._m_menu {
+  text-transform: uppercase;
   color: #fff;
   padding: 10rem 0;
   position: fixed;
@@ -4379,6 +4380,7 @@ section {
   align-items: center;
   justify-content: space-around;
   width: 4.5rem;
+  min-width: 4.5rem;
   height: 4.5rem;
   display: none
 }
@@ -4428,10 +4430,11 @@ section {
   padding: 1rem 0
 }
 .logo {
-  width: 8rem;
-  height: 8.6rem;
+  width: 9.5rem;
+  height: 10rem;
   display: flex;
   align-items: center;
+  margin-right: 2rem;
   transition: ease-in-out .2s;
   -webkit-transition: ease-in-out .2s;
   -moz-transition: ease-in-out .2s;
@@ -4445,6 +4448,32 @@ section {
 .logo:hover {
   opacity: .7
 }
+.header__content {
+  width: 94%;
+  display: flex;
+  flex-direction: column
+}
+.header__content-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+.header__content-row:nth-child(1) {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #fff
+}
+.header__content-title {
+  width: 70%;
+  font-size: 1.6rem;
+  display: flex
+}
+.header__content-icons {
+  position: relative;
+  display: flex;
+  width: 50%;
+  justify-content: flex-end
+}
 .menu {
   list-style: none;
   display: -ms-grid;
@@ -4453,7 +4482,8 @@ section {
   -ms-grid-columns: (minmax(min-content,max-content))[8];
   grid-template-columns: repeat(8,minmax(-webkit-min-content,-webkit-max-content));
   grid-template-columns: repeat(8,minmax(min-content,max-content));
-  grid-gap: 5rem
+  grid-gap: 5rem;
+  text-transform: uppercase
 }
 .menu * {
   transition: ease-in-out .3s;
@@ -4461,6 +4491,9 @@ section {
   -moz-transition: ease-in-out .3s;
   -ms-transition: ease-in-out .3s;
   -o-transition: ease-in-out .3s
+}
+.menu a {
+  font-size: 1.8rem
 }
 .menu a:hover {
   opacity: .7
@@ -4528,7 +4561,8 @@ section {
   min-height: 30px;
   margin-right: 10px;
   height: 30px;
-  overflow: hidden
+  overflow: hidden;
+  display: flex
 }
 .find__form-icon:last-child,
 .icon:last-child {
@@ -4652,7 +4686,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  background: #282727
+  background: url(../img/main__bg_2.jpg) no-repeat center/cover
 }
 .section__about,
 .section__calculate {
@@ -4664,9 +4698,8 @@ section {
   align-items: flex-start;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 12rem;
+  -ms-grid-columns: 40% 55%;
+  grid-template-columns: 40% 55%;
   position: relative
 }
 .section__product {
@@ -4674,7 +4707,6 @@ section {
   padding-top: 10rem
 }
 .section__works {
-  padding-top: 5rem;
   padding-bottom: 5rem;
   color: #fff;
   position: relative;
@@ -4719,7 +4751,6 @@ section {
   flex-direction: column
 }
 .section__news {
-  padding-top: 6rem;
   padding-bottom: 6rem;
   position: relative;
   background: #282727
@@ -6857,6 +6888,9 @@ input.answere {
   opacity: 1;
   width: 100%
 }
+.phone__desktop {
+  margin-right: 1rem
+}
 .phone__mob {
   display: none
 }
@@ -7099,18 +7133,30 @@ input.answere {
 }
 @media only screen and (max-width:1100px) {
   .burger_menu {
-    display: flex;
-    order: 4
+    display: flex
   }
-  .logo {
-    order: 1
+  .header__content-row:nth-child(1) {
+    border-color: transparent;
+    padding-bottom: 0;
+    margin-bottom: 0
+  }
+  .header__content-row:nth-child(2) {
+    display: none
+  }
+  .header__content-icons {
+    margin-right: 2rem
   }
   .menu {
     display: none
   }
+  .call__mobile {
+    display: inline-block;
+    font-size: 2rem
+  }
   .call__desktop {
     font-size: 2rem;
-    order: 1
+    order: 1;
+    display: none
   }
   .phones.desktop {
     order: 2
@@ -7126,9 +7172,9 @@ input.answere {
   }
   .find__form-icon,
   .icon {
-    width: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: 45px;
+    min-width: 45px;
+    min-height: 45px;
     margin-right: 10px
   }
   .viber__desktop {
@@ -7140,7 +7186,6 @@ input.answere {
     order: 2
   }
   .section {
-    padding-top: 9rem;
     padding-bottom: 4rem
   }
   .section-social {
@@ -7341,14 +7386,15 @@ input.answere {
   .calculate__title {
     text-align: center
   }
+  .find__form-input {
+    height: 45px
+  }
   .find__form-icon {
     margin-right: 0
   }
-  .find__form.__show {
-    right: 55px
-  }
   .find__form {
-    order: 3
+    width: 530px;
+    right: 55px
   }
   .phone__desktop {
     display: none
@@ -7647,15 +7693,26 @@ screen and (max-height:300px) {
   }
   .burger_menu {
     width: 3.5rem;
-    height: 3.5rem
+    height: 3.5rem;
+    min-width: 3.5rem
   }
   .logo {
-    width: 7rem;
-    min-width: 7rem;
-    height: 7rem
+    width: 8.5rem;
+    min-width: 8.5rem;
+    height: 9rem
   }
-  .call__mobile {
-    display: inline-block
+  .header__content-row:nth-child(1) {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end
+  }
+  .header__content-title {
+    display: none
+  }
+  .header__content-icons {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 0
   }
   .call__desktop {
     display: none
@@ -7677,7 +7734,7 @@ screen and (max-height:300px) {
     width: 60%
   }
   .section {
-    padding-top: 9rem
+    padding-top: 11rem
   }
   .section-social {
     padding-top: 0;
@@ -7904,8 +7961,15 @@ screen and (max-height:300px) {
   .custom__file {
     width: 90%
   }
-  .find__form.__show {
-    width: 230px
+  .find__form-input {
+    height: 35px
+  }
+  .find__form {
+    width: 300px;
+    right: 35px
+  }
+  .find__form form {
+    height: 35px
   }
 }
 @media screen and (max-width:600px) and (orientation:landscape) {
@@ -7934,8 +7998,16 @@ screen and (max-height:300px) {
   }
 }
 @media only screen and (max-width:360px) {
+  .logo {
+    width: 7.5rem;
+    min-width: 7.5rem;
+    height: 8rem
+  }
   .wrap {
     width: 80%
+  }
+  .find__form {
+    width: 250px
   }
 }
 @media only screen and (max-width:320px) {
@@ -7966,6 +8038,7 @@ print {
 }
 @supports (-webkit-appearance:none){
 .slick-loading .slick-list{background:#fff url(img/plugins/slick/ajax-loader.gif) center center no-repeat}
+.section__header._product_header:before{background:url(../img/main__bg_2.jpg) no-repeat center/cover}
 .section__works:after{background:url(../img/main__bg_2.jpg) no-repeat center/cover}
 .section__services:after{background:url(../img/main__bg_2.jpg) no-repeat center/cover}
 .section__news:after{background:url(../img/main__bg_2.jpg) no-repeat center/cover}
