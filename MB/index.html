@@ -24,6 +24,7 @@
       src="https://api-maps.yandex.ru/2.1/?apikey=c0f6f5c0-aaee-4a96-ad79-ebd980c3424d&lang=ru_RU&scroll=false&mode=release"
       type="text/javascript">
     </script>
+    <script src="https://kit.fontawesome.com/e272fd0660.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/main.min.css">
     <title>Корпусная, встроенная мебель под заказ в Минске, купить мебель на заказ</title>
@@ -37,8 +38,7 @@
 
   <body>
 
-
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__container container">
         <a href="index.html#" class="logo">
           <img src="img/logo.gif" loading="lazy" alt="logo" title="">
@@ -57,11 +57,31 @@
         </nav>
         <div class="wrap">
           <div class="phones desktop">
-            <a class="h4" href="tel:+375 (29) 173-77-77">+375 (29) 173-77-77</a>
-            <a class="viber viber__desktop" href="viber://chat?number=+375 (29) 173-77-77"><img
-                src="img/icon/social/viber.png" alt=""></a>
-            <a class="viber viber__mobile" href="viber://add?number=375 (29) 173-77-77"><img
-                src="img/icon/social/viber.png" alt=""></a>
+            <a class="h4 phone__desktop" href="tel:+375 (29) 173-77-77">+375 (29) 173-77-77 </a>
+            <a class="h4 icon phone__mob" href="tel:+375 (29) 173-77-77">
+              <img src="img/icon/icon__phone.svg" alt="">
+            </a>
+            <a class="icon viber viber__desktop" href="viber://chat?number=+375 (29) 173-77-77">
+              <img src="img/icon/social/viber.png" alt="">
+            </a>
+            <a class="icon icon__mobile viber viber__mobile" href="viber://add?number=375 (29) 173-77-77">
+              <img src="img/icon/social/viber.png" alt="">
+            </a>
+            <a class="icon icon__mobile icon__location" target="_blank"
+              href="https://yandex.by/maps/157/minsk/?ll=27.503917%2C53.816686&mode=routes&rtext=~53.816352%2C27.503251&rtt=mt&ruri=~&z=17">
+              <img src="img/icon/icon__location.svg" alt="">
+            </a>
+            <a href="#header" class="find__form-icon">
+              <img src="img/icon/icon__search.svg" alt="">
+            </a>
+            <span class="find__form">
+              <form action="">
+                <input placeholder="Поиск" required type="text" class="find__form-input">
+                <input id="find__form-submit" type="submit" value="">
+                <label class="find__form-label" for="find__form-submit">Найти</label>
+              </form>
+            </span>
+
           </div>
           <a data-subject="Перезвоните мне" href="#form" class="show_form_btn call__desktop ">Перезвоните мне</a>
         </div>
@@ -77,7 +97,7 @@
           <li><a href="index.html#contacts">Контакты</a></li>
 
           <div class="phones mobile">
-            <a class="h4" href="tel:+375 (29) 173-77-77">+375 (29) 173-77-77</a>
+            <a class="h4" href="tel:+375 (29) 173-77-77">+375 (29) 173-77-77 </a>
           </div>
           <a data-subject="Перезвоните мне" href="#form" class="show_form_btn call__mobile">Перезвоните мне</a>
 
@@ -87,21 +107,11 @@
           <div class="bar bar_2"></div>
           <div class="bar bar_3"></div>
         </div>
-        <!-- <span class="find__form">
-          <form action="">
-            <input placeholder="Поиск" required type="text" class="find__form-input">
-            <input id="find__form-submit" type="submit" value="">
-            <label class="find__form-label" for="find__form-submit">Найти</label>
-          </form>
-          <span class="find__form-icon">
-            <img src="img/icon/icon__search.svg" alt="">
-            </ы>
-          </span>
-        </span> -->
+
       </div>
     </header>
 
-<section class="section header_section">
+<section class="section section__header">
   <!-- <div class="container"> -->
   <div class="header_slider">
     <div class="header_slider_slide">
@@ -151,11 +161,27 @@
     </div>
   </div>
 </section>
- 
-<section id="about_us" class="section about_us_section">
+<section class="section section-social">
+  <div class="social__icons social__icons-header">
+    <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+</section>
+
+<section id="about_us" class="section section__about">
   <div class="container ">
-    <div class="about_us_section_col wow animate__animated animate__flipInX">
-      <h3 class="h3 about_us_section_title">О нас</h3>
+    <div class="section__about_col wow animate__animated animate__flipInX">
+      <h3 class="h3 section__about_title">О нас</h3>
       <p class="">Здравствуйте, глубоко признательны всем посетителям за уделённое внимание нашему официальному
         интернет-ресурсу, освещающему производственную деятельность компании ” МебельВам”.
       </p>
@@ -167,7 +193,7 @@
         индивидуальным качеством
         присущим товарам, выпущенным в Республике Беларусь.</p>
     </div>
-    <div class="about_us_section_col wow animate__animated animate__fadeInRight">
+    <div class="section__about_col wow animate__animated animate__fadeInRight">
       <iframe class="about_us_video  " src="https://www.youtube.com/embed/mYpI-RxkLeM" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
@@ -175,7 +201,7 @@
   </div>
 </section>
 
-<section id="services" class="section services_section">
+<section id="services" class="section section__services">
   <div class="container">
     <div class="h3 services_title">Каталог мебели</div>
     <div class="services_grid">
@@ -298,11 +324,11 @@ animate__fadeIn delay-04">
   </div>
 </section>
 
-<section id="works" class="section works_section">
+<section id="works" class="section section__works">
   <div class="container d-flex-column d-flex-jc-start">
     <h3 class="h3 works_title">Наши работы</h3>
   </div>
-  <div class="works_galery works_galery_slider container d-flex-jc-center wow animate__animated
+  <div class="works__galery works__slider container d-flex-jc-center wow animate__animated
 animate__fadeIn">
     <a class="works__item" href="img/slider/works/img_1.jpg" title="Название работы">
       <img loading="lazy" src="img/slider/works/img_1.jpg">
@@ -336,15 +362,10 @@ animate__fadeIn">
     <a href="#works" class="def_btn text-center show_form_btn">Заказать консультацию</a>
   </div>
 </section>
-<section id="calculate" class="section calculate__section">
+<section id="calculate" class="section section__calculate">
   <div class="container calculate__container">
     <div class="calculate__col wow animate__animated animate__flipInX">
-      <h3 class="h3 calculate__title">Поможем рассчитать стоимость</h3>
-      <p class="">Интересна стоимость изготовление изделия по индивидуальному дизайну?
-      </p>
-      <p>Вы можете отправить нам интересующее вас изображение товара и мы рассчитаем его стоимость, и в кратчайшие сроки
-        свяжемся с вами</p>
-
+      <h3 class="h3 calculate__title">Рассчитаем стоимость по картинке</h3>
     </div>
     <div class="calculate__col wow animate__animated animate__fadeInRight">
       <form action="" class="form form__submit form__calculation">
@@ -579,9 +600,9 @@ animate__fadeIn delay-06">
   </div>
 </section>
 
-<section id="news" class="section news_section">
+<section id="news" class="section section__news">
   <div class="container d-flex-jc-center d-flex-column">
-    <h3 class="h3 news_section_title">Новости</h3>
+    <h3 class="h3 section__news_title">Новости</h3>
     <div class="news_grid">
       <div class="news__item wow animate__animated
 animate__fadeIn delay-01">
@@ -657,7 +678,7 @@ animate__fadeIn delay-03">
   </div>
 </section>
 
-<section id="reviews" class="section reviews_section wow animate__animated animate__fadeIn">
+<section id="reviews" class="section section__reviews wow animate__animated animate__fadeIn">
   <div class="container d-flex-jc-center d-flex-column">
     <h3 class="reviews_title h3">
       Отзывы
@@ -755,7 +776,7 @@ animate__fadeIn delay-03">
 </section>
 
 
-<section id="questions" class=" wow animate__animated animate__fadeIn section questions_section">
+<section id="questions" class=" wow animate__animated animate__fadeIn section section__questions">
   <noscript class="loading-lazy">
     <img src="img/tools/img_1.png" loading="lazy" alt="" class="questions_img questions_img_1">
   </noscript>
@@ -821,7 +842,7 @@ animate__fadeIn delay-03">
       <!-- <a class="h4" href="tel:+375 (29) 173-77-77	">+375 (29) 173-77-77</a> -->
       <div class="footer__social">
         <span class="footer__social-title">Мы в соцсетях</span>
-        <div class="footer__social-icons">
+        <!-- <div class="footer__social-icons">
           <a href="" class="footer__social-link">
             <img src="img/icon/social/instagram.svg" alt="instagram">
           </a>
@@ -830,6 +851,20 @@ animate__fadeIn delay-03">
           </a>
           <a href="" class="footer__social-link">
             <img src="img/icon/social/ok.png" alt="ok">
+          </a>
+        </div> -->
+        <div class="social__icons">
+          <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="social__icons-link" href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
           </a>
         </div>
         <span class="footer__social-title">Подписчикам скидка:)</span>
