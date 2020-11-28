@@ -4112,7 +4112,7 @@ section {
   flex-direction: column
 }
 body {
-  background: #f4f1de
+  background: #fcfae1
 }
 .container {
   margin: 0 auto;
@@ -4432,7 +4432,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 8;
-  background: #f4f1de;
+  background: #fcfae1;
   padding: 1rem 0
 }
 .logo {
@@ -4728,7 +4728,7 @@ section {
   padding-bottom: 5rem;
   color: #fff;
   position: relative;
-  background: #f4f1de
+  background: #fcfae1
 }
 .section__works .container {
   z-index: 1
@@ -4747,7 +4747,7 @@ section {
 }
 .section__services {
   position: relative;
-  background: #f4f1de;
+  background: #fcfae1;
   color: #fff
 }
 .section__services:after {
@@ -4771,7 +4771,7 @@ section {
 .section__news {
   padding-bottom: 6rem;
   position: relative;
-  background: #f4f1de
+  background: #fcfae1
 }
 .section__news .container {
   z-index: 1
@@ -5148,7 +5148,7 @@ section {
   -o-transition: ease-in-out .4s;
   color: #414141;
   font-size: 2rem;
-  background: #f4f1de;
+  background: #fcfae1;
   transform: translateY(100%);
   -webkit-transform: translateY(100%);
   -moz-transform: translateY(100%);
@@ -5558,7 +5558,7 @@ section {
   display: block;
   width: 0;
   height: 0;
-  border-top: 70px solid #f4f1de;
+  border-top: 70px solid #fcfae1;
   border-left: 120px solid transparent
 }
 ._top_triangle._gray {
@@ -5572,7 +5572,7 @@ section {
   display: block;
   width: 0;
   height: 0;
-  border-bottom: 70px solid #f4f1de;
+  border-bottom: 70px solid #fcfae1;
   border-left: 120px solid transparent
 }
 ._bottom_triangle._gray {
@@ -6629,7 +6629,7 @@ section {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #f4f1de;
+  background: #fcfae1;
   z-index: 100500
 }
 #p_prldr img {
@@ -7735,30 +7735,18 @@ screen and (max-height:300px) {
     width: 100%
   }
   .burger_menu.__change .bar_1 {
-    transform: rotate(-45deg) translate(-9px,9px);
-    -webkit-transform: rotate(-45deg) translate(-9px,9px);
-    -moz-transform: rotate(-45deg) translate(-9px,9px);
-    -ms-transform: rotate(-45deg) translate(-9px,9px);
-    -o-transform: rotate(-45deg) translate(-9px,9px)
+    transform: rotate(-45deg) translate(-10px,9px)
   }
   .burger_menu.__change .bar_2 {
-    transform: translateX(-20%) scale(0,1);
-    -webkit-transform: translateX(-20%) scale(0,1);
-    -moz-transform: translateX(-20%) scale(0,1);
-    -ms-transform: translateX(-20%) scale(0,1);
-    -o-transform: translateX(-20%) scale(0,1)
+    transform: translateX(-20%) scale(0,1)
   }
   .burger_menu.__change .bar_3 {
-    transform: rotate(45deg) translate(-8px,-8px);
-    -webkit-transform: rotate(45deg) translate(-8px,-8px);
-    -moz-transform: rotate(45deg) translate(-8px,-8px);
-    -ms-transform: rotate(45deg) translate(-8px,-8px);
-    -o-transform: rotate(45deg) translate(-8px,-8px)
+    transform: rotate(45deg) translate(-10px,-9px)
   }
   .burger_menu {
-    width: 3.5rem;
-    height: 3.5rem;
-    min-width: 3.5rem
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem
   }
   .logo {
     width: 8.5rem;
@@ -7774,7 +7762,7 @@ screen and (max-height:300px) {
     display: none
   }
   .header__content-icons {
-    width: 60%;
+    width: 65%;
     margin-right: auto;
     margin-left: auto
   }
@@ -7790,9 +7778,9 @@ screen and (max-height:300px) {
   }
   .find__form-icon,
   .icon {
-    width: 35px;
-    min-width: 35px;
-    min-height: 35px
+    width: 40px;
+    min-width: 40px;
+    min-height: 40px
   }
   .wrap {
     width: 60%
@@ -7998,7 +7986,7 @@ screen and (max-height:300px) {
     grid-gap: 1rem;
     margin-right: 0;
     width: 100%;
-    background: #f4f1de;
+    background: #fcfae1;
     padding: 0 1rem 2rem
   }
   .product__label {
