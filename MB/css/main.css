@@ -4415,7 +4415,7 @@ section {
   width: 90%;
   height: 4px;
   min-height: 4px;
-  background: #892706;
+  background: #a3a3a3;
   transition: ease-in-out .2s;
   -webkit-transition: ease-in-out .2s;
   -moz-transition: ease-in-out .2s;
@@ -4648,7 +4648,7 @@ section {
   backdrop-filter: blur(10px)
 }
 .social__icons-link i {
-  color: #892706
+  color: #a3a3a3
 }
 .social__icons-link:last-child {
   margin-right: 0
@@ -4688,7 +4688,7 @@ section {
 }
 .section__header .slick-dots li.slick-active {
   border-color: #fff;
-  background: #892706
+  background: #a3a3a3
 }
 .section__header .slick-dotted.slick-slider {
   margin-bottom: 0
@@ -4957,7 +4957,7 @@ section {
   margin-right: 2rem;
   content: '';
   display: block;
-  background: #892706;
+  background: #a3a3a3;
   min-width: 13px;
   min-height: 13px;
   border-radius: 50%;
@@ -5041,7 +5041,7 @@ section {
   font-weight: 700;
   color: #fff;
   padding: 1.5rem 6.9rem;
-  background: #892706;
+  background: #a3a3a3;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5054,7 +5054,7 @@ section {
   -o-transition: ease-in-out .3s
 }
 .def_btn:hover {
-  background: #88716a
+  background: #877e7e
 }
 .h3 {
   margin-bottom: 4rem
@@ -5163,7 +5163,7 @@ section {
   -o-transition: ease-in-out .8s;
   position: absolute;
   content: '';
-  background: #88716a;
+  background: #877e7e;
   height: 2px;
   display: block;
   width: 0;
@@ -5299,11 +5299,11 @@ section {
   position: static
 }
 .works__slider .slick-dots li {
-  background: #892706;
+  background: #a3a3a3;
   border: 2px solid transparent
 }
 .works__slider .slick-dots li.slick-active {
-  border-color: #892706;
+  border-color: #a3a3a3;
   background: #fff
 }
 .works__slider .slick-dots li:last-child {
@@ -5397,7 +5397,7 @@ section {
 }
 .shipping_area_tab span {
   display: block;
-  border: 2px solid #892706;
+  border: 2px solid #a3a3a3;
   background: #fff;
   cursor: pointer;
   width: 13px;
@@ -5415,7 +5415,7 @@ section {
 }
 .shipping_area_tab.__active_tab span {
   border-color: transparent;
-  background: #892706
+  background: #a3a3a3
 }
 .border_top {
   margin-top: 5px;
@@ -5635,7 +5635,7 @@ section {
   min-height: 280px;
   position: relative;
   z-index: 1;
-  background: #f2f2f2;
+  background: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,.05);
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -5767,7 +5767,7 @@ section {
   display: block;
   height: 2px;
   width: 100%;
-  background: #892706;
+  background: #a3a3a3;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5839,7 +5839,7 @@ section {
   background: #0a2d1e
 }
 .reviews_slider .custom_slick_arrow:hover span {
-  background: #892706
+  background: #a3a3a3
 }
 .review {
   position: relative;
@@ -6399,7 +6399,7 @@ section {
 }
 .product_area::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
-  background: #892706
+  background: #a3a3a3
 }
 .product_area_aside {
   margin-right: 6rem;
@@ -6433,7 +6433,7 @@ section {
 .product__label._clicked,
 .product__label:hover {
   color: #f9f9f9;
-  background: #892706
+  background: #a3a3a3
 }
 .product__label:last-child {
   margin-bottom: 0
@@ -6528,7 +6528,7 @@ section {
 .product__features_list li.product__price {
   font-weight: 700;
   color: #fff;
-  background: #892706
+  background: #a3a3a3
 }
 .product__info {
   color: #414141;
@@ -6549,7 +6549,7 @@ section {
   display: block;
   width: 100%;
   height: 2px;
-  background: #892706;
+  background: #a3a3a3;
   border-radius: 5px 0 5px 5px;
   -webkit-border-radius: 5px 0 5px 5px;
   -moz-border-radius: 5px 0 5px 5px;
@@ -6569,7 +6569,7 @@ section {
   min-height: 40px;
   width: 40px;
   height: 40px;
-  background: #892706;
+  background: #a3a3a3;
   border-radius: 1000px;
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
