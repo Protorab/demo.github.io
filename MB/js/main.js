@@ -14833,7 +14833,7 @@ testWebP(function (support) {
 $(document).ready(function () {
   // wow.js
   new WOW().init();
-  const autoplaySwitch = true; // false
+  const autoplaySwitch = true; // false true
   // header_slider
   var header_slider = ".header_slider";
   $(header_slider).slick({
