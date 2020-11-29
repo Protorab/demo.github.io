@@ -11,7 +11,7 @@ $mainBgBtnHover: #877e7e;
 
 
 $mainBgA:#f4f1de91;
-$subMainBg: #f4f1de;
+$subMainBg: #FFFEEA;
 $subMainBgAct:#B7B5AB;
 $mainTextColor: #414141;
 
@@ -565,19 +565,14 @@ footer,
   @media only screen and (max-width : 1100px) {}
 
   @media only screen and (max-width : 600px) {
-    width: 8.5rem;
-    min-width: 8.5rem;
+    width: 6.5rem;
+    min-width: 6.5rem;
+    margin-right: 0rem;
 
-    height: 9rem;
+    height: 6rem;
   }
 
-  @media only screen and (max-width : 360px) {
-    width: 7.5rem;
-    min-width: 7.5rem;
-
-    height: 8rem;
-
-  }
+  @media only screen and (max-width : 360px) {}
 
 }
 
@@ -648,10 +643,7 @@ footer,
 
         &.viber__mobile {
           order: 1;
-          width: 50px;
-          height: 50px;
-          min-width: 50px;
-          margin-right: 5px;
+
         }
       }
 
@@ -659,15 +651,13 @@ footer,
     }
 
     @media only screen and (max-width : 600px) {
-      width: 65%;
+      width: auto;
       // margin-bottom: 1rem;
       margin-right: auto;
       margin-left: auto;
     }
 
-    @media only screen and (max-width : 320px) {
-      width: 70%;
-    }
+    @media only screen and (max-width : 320px) {}
 
   }
 }
@@ -843,6 +833,11 @@ nav {
   height: 30px;
   overflow: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $subMainBgAct;
+  backdrop-filter: blur(10px);
+  @include _transition(.3s);
 
   &:last-child {
     margin-right: 0;
@@ -857,20 +852,31 @@ nav {
     object-fit: cover;
   }
 
+  i {
+    font-size: 3rem;
+
+    color: $mainBgBtnHover;
+  }
+
   &__mobile {
     display: none;
 
     @media only screen and (max-width : 1100px) {
-      display: inline-block;
+      display: flex;
     }
 
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   @media only screen and (max-width : 1100px) {
     width: 45px;
     min-width: 45px;
     min-height: 45px;
-    margin-right: 10px;
+    margin-right: 15px;
+
   }
 
   @media only screen and (max-width : 600px) {
@@ -974,6 +980,11 @@ nav {
 
 .section__title {
   text-transform: uppercase;
+
+  @media only screen and (max-width : 1100px) {
+    text-align: center;
+  }
+
 }
 
 .social__icons {
@@ -1922,6 +1933,16 @@ nav {
   margin-bottom: 3rem;
 }
 
+.reade__more {
+  display: none;
+
+  cursor: pointer;
+
+  @media only screen and (max-width : 1100px) {
+    display: block;
+  }
+
+}
 
 
 .services_title {
@@ -1959,7 +1980,8 @@ nav {
   @media only screen and (max-width : 768px) {}
 
   @media only screen and (max-width : 600px) {
-    grid-template-columns: repeat(1, 90%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
     justify-content: center;
 
   }
@@ -1982,6 +2004,7 @@ nav {
   overflow: hidden;
   width: 100%;
   height: 280px;
+  @include _border_radius(5px);
 
   .h4,
   .more_info {
@@ -2058,6 +2081,20 @@ nav {
 
   @media only screen and (max-width : 1600px) {
     // max-height: 210px;
+  }
+
+  @media only screen and (max-width : 1100px) {
+    height: 180px;
+
+    .h4,
+    .more_info {
+      align-items: flex-start;
+      min-height: 50px;
+      font-size: 1.6rem;
+      padding: .5rem 1.5rem;
+    }
+
+
   }
 
   @media only screen and (max-width : 800px) {
@@ -2139,9 +2176,12 @@ nav {
   }
 
   @media only screen and (max-width : 1100px) {
+
+
     img {
-      // max-width: 15rem;
-      // max-height: 15rem;
+
+      max-width: 15rem;
+      max-height: 15rem;
       margin-right: 3rem;
       margin-bottom: 0rem;
     }
@@ -3616,6 +3656,12 @@ nav {
 
   .logo {
     margin-right: 1.5rem;
+
+    @media only screen and (max-width : 1100px) {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
   }
 }
 
@@ -3627,6 +3673,15 @@ nav {
   &:nth-child(1),
   &:nth-child(4) {
     flex-direction: row;
+  }
+
+  &:nth-child(1) {
+    @media only screen and (max-width : 1100px) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
   }
 
   .wrap {
@@ -3663,10 +3718,8 @@ nav {
   @media only screen and (max-width : 800px) {
     &:nth-child(3) {
       grid-column: auto;
-      grid-row: auto;
+      grid-row: 4;
     }
-
-
   }
 
   @media only screen and (max-width : 600px) {
@@ -4364,8 +4417,14 @@ input {
   width: 100%;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, .05);
-  padding: 6rem 3rem 3rem;
-  @include _border_radius(5px 5px 0 0px);
+  padding: 5rem 3rem 3rem;
+  @include _border_radius(5px);
+
+  @media only screen and (max-width : 1100px) {
+    padding: 3rem;
+
+  }
+
 }
 
 .calculate__title {
@@ -4608,6 +4667,6 @@ input {
   display: none;
 
   @media only screen and (max-width : 1100px) {
-    display: block;
+    display: flex;
   }
 }
