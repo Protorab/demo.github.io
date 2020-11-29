@@ -14826,8 +14826,190 @@ testWebP(function (support) {
   } else {
     document.querySelector("body").classList.add("no-webp");
   }
+
+  
 });
 ;
+
+$(document).ready(function () {
+  function documentReady() {
+    var MAX_SNOW = 200;
+    var MAX_SNOW_SIZE = 7;
+    var MAX_SNOW_SPEED = 2;
+
+    snowStart();
+
+    function snowStart() {
+      // console.log("// Snow animation start");
+      createSnows();
+    }
+
+    function createSnows() {
+      var container = $("#snow-animation-container");
+
+      for (var i = 0; i < MAX_SNOW; i++) {
+        var appendItem = getRandomItem(i);
+        container.append(appendItem);
+        var animateItem = $(".snow" + String(i));
+        var randomTime = Math.random() * MAX_SNOW_SPEED;
+        goAnimate(animateItem, i, randomTime);
+        goAnimate2(animateItem);
+      }
+
+      // console.log("// Create snows");
+    }
+
+    function goAnimate(item, id, randomTime) {
+      TweenMax.to(item, randomTime, {
+        css: {
+          marginTop: "+=100",
+        },
+        ease: Linear.easeNone,
+        onComplete: function () {
+          var topPosition = item.css("margin-top").replace("px", "");
+          if (topPosition > $(window).height()) {
+            changePosition(item);
+            randomTime = Math.random() * MAX_SNOW_SPEED;
+            goAnimate(item, id, randomTime);
+          } else {
+            goAnimate(item, id, randomTime);
+          }
+        },
+      });
+    }
+
+    function goAnimate2(item) {
+      var directionTime = 1 + Math.floor(Math.random() * 5);
+      var randomDirection = 1 + Math.floor(Math.random() * 4);
+      var delayTime = 1 + Math.floor(Math.random() * 3);
+
+      if (randomDirection == 1) {
+        TweenMax.to(item, directionTime, {
+          css: {
+            marginLeft: "+=100",
+          },
+          ease: Linear.easeOut,
+          onComplete: function () {
+            TweenMax.to(item, directionTime, {
+              css: {
+                marginLeft: "-=100",
+              },
+              delay: delayTime,
+              ease: Linear.easeOut,
+              onComplete: function () {
+                goAnimate2(item);
+              },
+            });
+          },
+        });
+      } else if (randomDirection == 2) {
+        TweenMax.to(item, directionTime, {
+          css: {
+            marginLeft: "-=100",
+          },
+          ease: Linear.easeOut,
+          onComplete: function () {
+            TweenMax.to(item, directionTime, {
+              css: {
+                marginLeft: "+=100",
+              },
+              delay: delayTime,
+              ease: Linear.easeOut,
+              onComplete: function () {
+                goAnimate2(item);
+              },
+            });
+          },
+        });
+      } else if (randomDirection == 3) {
+        TweenMax.to(item, directionTime, {
+          css: {
+            marginLeft: "+=100",
+          },
+          ease: Linear.easeOut,
+          onComplete: function () {
+            goAnimate2(item);
+          },
+        });
+      } else if (randomDirection == 4) {
+        TweenMax.to(item, directionTime, {
+          css: {
+            marginLeft: "-=100",
+          },
+          ease: Linear.easeOut,
+          onComplete: function () {
+            goAnimate2(item);
+          },
+        });
+      }
+    }
+
+    function changePosition(item) {
+      var _width = Math.floor(Math.random() * MAX_SNOW_SIZE);
+      var _height = _width;
+      var _blur = Math.floor(Math.random() * 5 + 2);
+      var _left = Math.floor(Math.random() * ($(window).width() - _width));
+      var _top =
+        -$(window).height() +
+        Math.floor(Math.random() * ($(window).height() - _height));
+
+      item.css("width", _width);
+      item.css("height", _height);
+      item.css("margin-left", _left);
+      item.css("margin-top", _top);
+      item.css("-webkit-filter", "blur(" + String(_blur) + "px)");
+      item.css("-moz-filter", "blur(" + String(_blur) + "px)");
+      item.css("-o-filter", "blur(" + String(_blur) + "px)");
+      item.css("-ms-filter", "blur(" + String(_blur) + "px)");
+      item.css("filter", "blur(" + String(_blur) + "px)");
+    }
+
+    function getRandomItem(id) {
+      var _width = Math.floor(Math.random() * MAX_SNOW_SIZE);
+      var _height = _width;
+      var _blur = Math.floor(Math.random() * 5 + 2);
+      var _left = Math.floor(Math.random() * ($(window).width() - _width));
+      var _top =
+        -$(window).height() +
+        Math.floor(Math.random() * ($(window).height() - _height));
+      var _id = id;
+
+      return getSmallSnow(_width, _height, _blur, _left, _top, _id);
+    }
+
+    function getSmallSnow(width, height, blur, left, top, id) {
+      var item =
+        "<div class='snow" +
+        id +
+        "' style='position:absolute; margin-left: " +
+        left +
+        "px; margin-top: " +
+        top +
+        "px; width: " +
+        width +
+        "px; height: " +
+        height +
+        "px; border-radius: 50%; background-color: white; -webkit-filter: blur(" +
+        blur +
+        "px); -moz-filter: blur(" +
+        blur +
+        "px); -o-filter: blur(" +
+        blur +
+        "px); -ms-filter: blur(" +
+        blur +
+        "px); filter: blur(" +
+        blur +
+        "px);'></div>";
+      return item;
+    }
+  }
+  const isMobileDevice = window.navigator.userAgent
+    .toLowerCase()
+    .includes("mobi");
+  if (!isMobileDevice) {
+    $(document).ready(documentReady);
+  }
+});
 ;
 
 /** @format */
@@ -14876,16 +15058,38 @@ $(document).ready(function () {
       verticalFit: false,
     },
   });
-
+  $(".about__gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>Наше производство</small>";
+      },
+    },
+  });
   var count = 0;
   $(".counter__plus").click(function (e) {
-    var itemPrice = $(this).parents(".item").find(".menu__slider-price").text();
+    var itemPrice = $(this)
+      .parents(".item")
+      .find(".catalog__slider-price")
+      .text();
     count++;
     $(this).parents(".item").find(".counter__number").text(count);
     e.preventDefault();
   });
   $(".counter__minus").click(function (e) {
-    var itemPrice = $(this).parents(".item").find(".menu__slider-price").text();
+    var itemPrice = $(this)
+      .parents(".item")
+      .find(".catalog__slider-price")
+      .text();
     count--;
     if (count <= 0) {
       count = 0;
@@ -14895,8 +15099,9 @@ $(document).ready(function () {
     }
     e.preventDefault();
   });
+  const autoplaySwitch = false; // false true
 
-  $(".menu__slider").slick({
+  $(".catalog__slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
@@ -14905,17 +15110,18 @@ $(document).ready(function () {
     touchMove: true,
     swipe: true,
     touchThreshold: 100,
-
+    autoplay: autoplaySwitch,
     autoplaySpeed: 2000,
     speed: 800,
     nextArrow:
-      '<div class="menu__slider-next menu__slider-arrow "><span> </span><span></span></div>',
+      '<div class="catalog__slider-next catalog__slider-arrow "><span> </span><span></span></div>',
     prevArrow:
-      '<div class="menu__slider-prev menu__slider-arrow"><span> </span><span></span></div>',
+      '<div class="catalog__slider-prev catalog__slider-arrow"><span> </span><span></span></div>',
     responsive: [
       {
         breakpoint: 800,
         settings: {
+          arrows: false,
           autoplay: true,
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -14924,6 +15130,8 @@ $(document).ready(function () {
       {
         breakpoint: 600,
         settings: {
+          arrows: false,
+          autoplay: true,
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -14945,19 +15153,47 @@ $(document).ready(function () {
     prevArrow:
       '<div class="reviews__slider-prev reviews__slider-arrow"><span> </span><span></span></div>',
   });
-  var ecoItemSlice = 0;
+  $(".about__slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".about__slider-nav",
+  });
+  $(".about__slider-nav").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: ".about__slider",
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    nextArrow:
+      '<div class="about__slider-next about__slider-arrow "><span> </span><span></span></div>',
+    prevArrow:
+      '<div class="about__slider-prev about__slider-arrow"><span> </span><span></span></div>',
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+  let ecoItemSlice = 0;
   if ($(window).width() >= 800) {
     ecoItemSlice = 8;
   } else {
     ecoItemSlice = 4;
   }
-  $(".eco__grid-item").slice(ecoItemSlice).slideToggle();
+  $(".decoration__grid-item").slice(ecoItemSlice).slideToggle();
   $(".load__more").click(function (e) {
-    if ($(".eco__grid-item").slice(ecoItemSlice).is(":visible")) {
-      $(".eco__grid-item").slice(ecoItemSlice).slideToggle("slow");
+    if ($(".decoration__grid-item").slice(ecoItemSlice).is(":visible")) {
+      $(".decoration__grid-item").slice(ecoItemSlice).slideToggle("slow");
       $(this).delay(300).text("Посмотреть все");
     } else {
-      $(".eco__grid-item").slice(ecoItemSlice).slideToggle("slow");
+      $(".decoration__grid-item").slice(ecoItemSlice).slideToggle("slow");
       $(this).delay(300).text("Скрыть");
     }
     e.preventDefault();
@@ -15026,185 +15262,18 @@ $(document).ready(function () {
   });
 });
 
-function documentReady() {
-  var MAX_SNOW = 200;
-  var MAX_SNOW_SIZE = 7;
-  var MAX_SNOW_SPEED = 2;
-
-  snowStart();
-
-  function snowStart() {
-    // console.log("// Snow animation start");
-    createSnows();
-  }
-
-  function createSnows() {
-    var container = $("#snow-animation-container");
-
-    for (var i = 0; i < MAX_SNOW; i++) {
-      var appendItem = getRandomItem(i);
-      container.append(appendItem);
-      var animateItem = $(".snow" + String(i));
-      var randomTime = Math.random() * MAX_SNOW_SPEED;
-      goAnimate(animateItem, i, randomTime);
-      goAnimate2(animateItem);
-    }
-
-    // console.log("// Create snows");
-  }
-
-  function goAnimate(item, id, randomTime) {
-    TweenMax.to(item, randomTime, {
-      css: {
-        marginTop: "+=100",
-      },
-      ease: Linear.easeNone,
-      onComplete: function () {
-        var topPosition = item.css("margin-top").replace("px", "");
-        if (topPosition > $(window).height()) {
-          changePosition(item);
-          randomTime = Math.random() * MAX_SNOW_SPEED;
-          goAnimate(item, id, randomTime);
-        } else {
-          goAnimate(item, id, randomTime);
-        }
-      },
-    });
-  }
-
-  function goAnimate2(item) {
-    var directionTime = 1 + Math.floor(Math.random() * 5);
-    var randomDirection = 1 + Math.floor(Math.random() * 4);
-    var delayTime = 1 + Math.floor(Math.random() * 3);
-
-    if (randomDirection == 1) {
-      TweenMax.to(item, directionTime, {
-        css: {
-          marginLeft: "+=100",
-        },
-        ease: Linear.easeOut,
-        onComplete: function () {
-          TweenMax.to(item, directionTime, {
-            css: {
-              marginLeft: "-=100",
-            },
-            delay: delayTime,
-            ease: Linear.easeOut,
-            onComplete: function () {
-              goAnimate2(item);
-            },
-          });
-        },
-      });
-    } else if (randomDirection == 2) {
-      TweenMax.to(item, directionTime, {
-        css: {
-          marginLeft: "-=100",
-        },
-        ease: Linear.easeOut,
-        onComplete: function () {
-          TweenMax.to(item, directionTime, {
-            css: {
-              marginLeft: "+=100",
-            },
-            delay: delayTime,
-            ease: Linear.easeOut,
-            onComplete: function () {
-              goAnimate2(item);
-            },
-          });
-        },
-      });
-    } else if (randomDirection == 3) {
-      TweenMax.to(item, directionTime, {
-        css: {
-          marginLeft: "+=100",
-        },
-        ease: Linear.easeOut,
-        onComplete: function () {
-          goAnimate2(item);
-        },
-      });
-    } else if (randomDirection == 4) {
-      TweenMax.to(item, directionTime, {
-        css: {
-          marginLeft: "-=100",
-        },
-        ease: Linear.easeOut,
-        onComplete: function () {
-          goAnimate2(item);
-        },
-      });
-    }
-  }
-
-  function changePosition(item) {
-    var _width = Math.floor(Math.random() * MAX_SNOW_SIZE);
-    var _height = _width;
-    var _blur = Math.floor(Math.random() * 5 + 2);
-    var _left = Math.floor(Math.random() * ($(window).width() - _width));
-    var _top =
-      -$(window).height() +
-      Math.floor(Math.random() * ($(window).height() - _height));
-
-    item.css("width", _width);
-    item.css("height", _height);
-    item.css("margin-left", _left);
-    item.css("margin-top", _top);
-    item.css("-webkit-filter", "blur(" + String(_blur) + "px)");
-    item.css("-moz-filter", "blur(" + String(_blur) + "px)");
-    item.css("-o-filter", "blur(" + String(_blur) + "px)");
-    item.css("-ms-filter", "blur(" + String(_blur) + "px)");
-    item.css("filter", "blur(" + String(_blur) + "px)");
-  }
-
-  function getRandomItem(id) {
-    var _width = Math.floor(Math.random() * MAX_SNOW_SIZE);
-    var _height = _width;
-    var _blur = Math.floor(Math.random() * 5 + 2);
-    var _left = Math.floor(Math.random() * ($(window).width() - _width));
-    var _top =
-      -$(window).height() +
-      Math.floor(Math.random() * ($(window).height() - _height));
-    var _id = id;
-
-    return getSmallSnow(_width, _height, _blur, _left, _top, _id);
-  }
-
-  function getSmallSnow(width, height, blur, left, top, id) {
-    var item =
-      "<div class='snow" +
-      id +
-      "' style='position:absolute; margin-left: " +
-      left +
-      "px; margin-top: " +
-      top +
-      "px; width: " +
-      width +
-      "px; height: " +
-      height +
-      "px; border-radius: 50%; background-color: white; -webkit-filter: blur(" +
-      blur +
-      "px); -moz-filter: blur(" +
-      blur +
-      "px); -o-filter: blur(" +
-      blur +
-      "px); -ms-filter: blur(" +
-      blur +
-      "px); filter: blur(" +
-      blur +
-      "px);'></div>";
-    return item;
-  }
-}
-
-const isMobileDevice = window.navigator.userAgent
-  .toLowerCase()
-  .includes("mobi");
-if (!isMobileDevice) {
-  $(document).ready(documentReady);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Custom JS
+  $(".catalog").addClass("animate__backInUp __show");
+  $(".catalog").slice(1).removeClass("animate__backInUp __show");
+  $(".catalog__menu-item").on("click", function () {
+    const catalogId = $(this).data("id");
+    $(".catalog__menu-item").removeClass("active");
+    $(this).addClass("active");
+    $(".catalog")
+      .removeClass("animate__backInUp __show")
+      .addClass("animate__backOutDown");
+    $(".catalog-" + catalogId)
+      .removeClass("animate__backOutDown")
+      .addClass("animate__backInUp __show");
+  });
 });
