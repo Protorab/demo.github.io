@@ -4478,7 +4478,8 @@ section {
   position: relative;
   display: flex;
   width: 50%;
-  justify-content: flex-end
+  justify-content: flex-end;
+  align-items: center;
 }
 .menu {
   list-style: none;
@@ -6002,8 +6003,7 @@ section {
   width: 500px;
   height: 400px;
   overflow: hidden;
-  border-top: 5px solid #282727;
-  border-bottom: 5px solid #282727;
+  border: 1px solid#a3a3a3;
   z-index: 100500;
   top: 0;
   bottom: 0;
@@ -7196,7 +7196,8 @@ input.answere {
 }
 @media only screen and (max-width:1100px) {
   .burger_menu {
-    display: flex
+    display: flex;
+    align-self: center;
   }
   .header__content-row:nth-child(1) {
     border-color: transparent;
@@ -7238,7 +7239,15 @@ input.answere {
     width: 45px;
     min-width: 45px;
     min-height: 45px;
-    margin-right: 10px
+    margin-right: 10px;
+    order:2;
+
+  }
+  .viber__mobile{
+    order:1;
+    width: 50px;
+    min-width: 50px;
+    min-height: 50px;
   }
   .viber__desktop {
     display: none
