@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="css/main.min.css"/>
+    <link rel="icon" href="img/favicon.png"/>
+    <title>Frontend-Interview</title>
+  </head>
+</html>
+<body>
+  <header></header>
+  <main class="page" role="main">
+    <section class="section">
+      <div class="wrapper wrapper__page">
+        <h1 class="title title__page">Чтобы написать, нажмите на кнопку ниже</h1><a class="btn btn-page__btn show__form" href="#"> Написать</a>
+      </div>
+    </section>
+  </main>
+  <div class="popup animate__animated" id="popup__form">
+    <div class="popup-overlay overlay"></div>
+    <form class="form__popup animate__animated" id="send__form" action="https://formspree.io/f/xknpvaqa" method="POST">
+      <div class="close close__form"><span></span></div>
+      <h1 class="popup__title" id="send__status">Заполните форму и нажмите "заказать"</h1>
+      <h1 class="popup__title" id="send__status-ok">Спасибо, скоро мы свяжемся с вами! </h1>
+      <h1 class="popup__title" id="send__status-error">Что-то пошло не так, попробуйте ещё раз </h1><span class="input__wrap">
+        <input class="input__wrap-area telephone" required="required" placeholder="Ваш номер..." type="tel" name="Телефон"/>
+        <input id="popup__form-submit" type="submit"/>
+        <label class="btn btn-input__btn" for="popup__form-submit"><span class="btn__text">Заказать</span></label></span>
+    </form>
+  </div>
+  <footer></footer>
+  <script src="js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/e272fd0660.js" crossorigin="anonymous"></script>
+</body>="form_subject" value="Form Subject">
+
+    <input required name="Телефон" placeholder="Введите имя" type="text" class="form__popup-input">
+    <input required name="Имя" placeholder="Введите телефон" type="phone" class="form__popup-input telephone">
+    <input required name="E-mail" placeholder="Введите e-mail" type="email" class="form__popup-input">
+
+    <textarea placeholder="Введите текст" name="Сообщение" cols="30" rows="10"
+      class="form__popup-input form__popup-textarea"></textarea>
+
+    <label for="popup__form-submit" class="form__popup-btn btn">Отправить</label>
+    <input type="submit" value="" id="popup__form-submit">
+  </form>
+</div>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

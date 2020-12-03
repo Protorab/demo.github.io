@@ -1,0 +1,22 @@
+#popup__form.popup.animate__animated
+  .popup-overlay.overlay
+  form#send__form.form__popup.animate__animated(
+    action="https://formspree.io/f/xknpvaqa",
+    method="POST"
+    )
+    .close.close__form
+      span
+    h1#send__status.popup__title Заполните форму и нажмите "заказать"
+    h1#send__status-ok.popup__title Спасибо, скоро мы свяжемся с вами! 
+    h1#send__status-error.popup__title Что-то пошло не так, попробуйте ещё раз 
+
+    span.input__wrap
+      input.input__wrap-area.telephone(
+        required,
+        placeholder="Ваш номер...",
+        type="tel",
+        name="Телефон",
+        ) 
+      input#popup__form-submit(type="submit")
+      label.btn.btn-input__btn(for="popup__form-submit")
+        span.btn__text Заказать
