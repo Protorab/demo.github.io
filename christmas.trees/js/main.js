@@ -15103,7 +15103,7 @@ $(document).ready(function () {
 });
 particlesJS.load(
   "particles-js",
-  "../assets/json/particles.js-config.json",
+  "./assets/json/particlesjs-config.json",
   function () {
     console.log("callback - particles.js config loaded");
   }
