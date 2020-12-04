@@ -14849,17 +14849,6 @@ $(document).ready(function () {
     $(".find__form input").focus();
   });
 
-  function subMenuUp() {
-    $(".sub__menu").slideUp();
-  }
-  $(".sub__menu").hover(
-    function () {},
-    function () {
-      $(".menu__drop").removeClass("__show");
-      $(".sub__menu").slideUp();
-    }
-  );
-
   if ($(window).width() >= 1024) {
   }
   $(".menu__drop").on("click", function () {
@@ -15017,7 +15006,6 @@ $(document).ready(function () {
   } else {
     decorationItemSlice = 4;
   }
-  console.log(decorationItemLength);
   if (decorationItemLength > decorationItemSlice) {
     $(".load__more").show().css("display", "flex");
   } else {
@@ -15059,24 +15047,27 @@ $(document).ready(function () {
     $(".menu").removeClass("__show");
     $(".menu__bg").fadeOut();
   });
-  $(".show__form").click(function (e) {
+  function showForm() {
     $(".popup").hide().css("display", "flex").fadeIn();
     $("body").addClass("__fixed");
+  }
+  $(".show__form").click(function (e) {
+    showForm();
     e.preventDefault();
   });
+  const reviewArea =
+    "<textarea placeholder='Отзыв' required='required' name='Отзыв' class='popup__textarea' cols='30' rows='10'></textarea>";
   $(".popup__close").click(function (e) {
     $(".popup").fadeOut();
     $("body").removeClass("__fixed");
-    $(".popup__textarea").hide();
-    $(".popup__textarea").attr("type", "hidden");
-    $(".popup__textarea").attr("required", false);
     $("._thx").hide();
     $("._def").show();
+    $(".popup__textarea").remove();
     e.preventDefault();
   });
   $(".write__review").click(function (e) {
-    $(".popup__textarea").show();
-    $(".popup__textarea").attr("required", true);
+    $(".telephone").after(reviewArea);
+    showForm();
     e.preventDefault();
   });
 
@@ -15112,7 +15103,8 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".catalog").addClass("animate__backInUp __show");
   $(".catalog").slice(1).removeClass("animate__backInUp __show");
   $(".catalog__menu-item").first().addClass("active");
-  $(".catalog__menu-item").on("click", function () {
+  $(".catalog__menu-item").on("click", function (e) {
+    e.preventDefault();
     const catalogId = $(this).data("id");
     if (!$(this).hasClass("active")) {
       $(".catalog__menu-item").removeClass("active");

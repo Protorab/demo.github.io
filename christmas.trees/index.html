@@ -58,14 +58,13 @@
           <img src="img/svg/icon-logo.svg" alt="" />
         </a>
         <div class="burger__menu"><span></span></div>
-        <ul class="menu">
-          <li class="menu__drop"><a href="#catalog">Каталог</a></li>
-          <li><a href="#decoration">Дополнительно</a></li>
-          <li><a href="#review">Отзывы</a></li>
-          <li><a href="#about">О нас</a></li>
-          <!-- <li><a href="#">Доставка</a></li> -->
-          <li><a href="#conacts">Контакты</a></li>
-        </ul>
+        <nav class="menu">
+          <a href="#catalog">Каталог</a>
+          <a href="#decoration">Дополнительно</a>
+          <a href="#review">Отзывы</a>
+          <a href="#about">О нас</a>
+          <a href="#conacts">Контакты</a>
+        </nav>
       </div>
     </header>
   </body>
@@ -382,12 +381,6 @@
   </section>
 
   <section class="section section__about gray__bg" id="about">
-    <img
-      class="section__about-img"
-      loading="lazy"
-      src="img/menu__img_2.png"
-      alt=""
-    />
     <div class="wrapper about__wrapper">
       <div class="about__text">
         <h5 class="t2 section__title">О нас</h5>
@@ -700,9 +693,7 @@
       </div>
     </div>
     <div class="wrapper reviews__wrapper">
-      <a href="#" class="btn btn-reviews show__form write__review"
-        >Написать отзыв</a
-      >
+      <a href="#" class="btn btn-reviews write__review">Написать отзыв</a>
     </div>
   </section>
 </main>
@@ -712,17 +703,17 @@
     <img src="img/svg/icon-logo-footer.svg" alt="">
   </a>
 
-  <ul class="footer-menu">
-    <li class="menu__drop"><a href="#catalog">Каталог</a>
-    <li><a href="#decoration">Дополнительно</a></li>
-    <li><a href="#about">О нас</a></li>
-    <!-- <li><a href="#">Доставка</a></li> -->
-    <li><a href="#conacts">Контакты</a></li>
-  </ul>
+  <nav class="footer-menu">
+				<a href="#catalog">Каталог</a>
+				<a href="#decoration">Дополнительно</a>
+				<a href="#review">Отзывы</a>
+				<a href="#about">О нас</a>
+				<a href="#conacts">Контакты</a>
+  </nav>
   <ul class="wrapper footer-social">
     <li>
       <a href="#">
-        <img src="img/svg/icon-inst-footer.svg" alt="">
+        <img src="img/svg/icon-inst.svg" alt="">
       </a>
     </li>
   </ul>
@@ -752,11 +743,19 @@
     <input type="hidden" name="admin_email" value="lya.an.id@gmail.com">
     <input type="hidden" class="subject" name="form_subject" value="">
     <input id="popup__submit" type="submit" value="">
-    <textarea placeholder="Отзыв" name="Отзыв" class="popup__textarea" id="" cols="30" rows="10"></textarea>
     <label for="popup__submit" class="btn btn-popup__btn">отправить</label>
   </form>
 </div>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+<script>
+//   particlesJS.load(
+//   "particles-js",
+//   "./assets/json/particlesjs-config.json",
+//   function () {
+//     console.log("callback - particles.js config loaded");
+//   }
+// );
+</script>
 <script src="js/main.min.js"></script>
 
 </body>
