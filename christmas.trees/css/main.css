@@ -4277,7 +4277,7 @@ pre::selection {
 .decoration__grid,
 .wrapper {
   display: flex;
-  z-index: 1;
+  z-index: 3;
   max-width: 73.125vw;
   width: 100%
 }
@@ -4286,7 +4286,7 @@ pre::selection {
   flex-direction: column;
   background: #fff;
   box-shadow: 0 0 20px rgba(244,161,123,.18);
-  z-index: 2;
+  z-index: 4;
   position: fixed;
   top: 0;
   transition: ease-in-out .3s;
@@ -4308,11 +4308,12 @@ pre::selection {
   top: 70px
 }
 main {
-  padding-top: 130px
+  padding-top: 130px;
+  z-index: 2
 }
 .wrapper__content {
   background: #fff;
-  z-index: 2;
+  z-index: 4;
   display: flex;
   height: 100%;
   align-items: center;
@@ -4613,8 +4614,7 @@ section div picture {
   padding-top: 120px;
   margin-top: -100px;
   margin-bottom: -50px;
-  padding-bottom: 135px;
-  z-index: 1
+  padding-bottom: 135px
 }
 .section__catalog-img {
   bottom: -1px
@@ -4624,8 +4624,7 @@ section div picture {
 }
 .section__decoration {
   padding-top: 120px;
-  padding-bottom: 90px;
-  z-index: 1
+  padding-bottom: 90px
 }
 .section__decoration-img {
   top: -1px
@@ -5075,6 +5074,7 @@ section div picture {
   margin: 0
 }
 .reviews__slider {
+  z-index: 4;
   background: #fff;
   position: relative;
   display: flex;
@@ -5257,6 +5257,7 @@ section div picture {
   height: auto
 }
 .footer-menu {
+  z-index: 4;
   max-width: 32.875vw;
   width: 100%;
   display: flex;
@@ -5509,6 +5510,17 @@ section div picture {
   backdrop-filter: blur(10px);
   z-index: 0;
   display: none
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2
+}
+#particles-js canvas {
+  z-index: 200
 }
 @media only screen and (max-width:1440px) {
   .catalog__slider-item,
