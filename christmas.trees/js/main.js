@@ -14805,7 +14805,7 @@ $(document).ready(function () {
       $("._thx").show();
       setTimeout(function () {
         $("._thx").hide();
-        $("._def").show();
+        $("._def").hide();
         $(".popup__close").click();
         th.trigger("reset");
       }, 1000);
@@ -14893,30 +14893,7 @@ $(document).ready(function () {
       },
     },
   });
-  var count = 0;
-  $(".counter__plus").click(function (e) {
-    var itemPrice = $(this)
-      .parents(".item")
-      .find(".catalog__slider-price")
-      .text();
-    count++;
-    $(this).parents(".item").find(".counter__number").text(count);
-    e.preventDefault();
-  });
-  $(".counter__minus").click(function (e) {
-    var itemPrice = $(this)
-      .parents(".item")
-      .find(".catalog__slider-price")
-      .text();
-    count--;
-    if (count <= 0) {
-      count = 0;
-      $(this).parents(".item").find(".counter__number").text(0);
-    } else {
-      $(this).parents(".item").find(".counter__number").text(count);
-    }
-    e.preventDefault();
-  });
+
   const autoplaySwitch = false; // false true
 
   $(".catalog__slider").slick({
@@ -15062,9 +15039,12 @@ $(document).ready(function () {
     $("body").removeClass("__fixed");
     $("._thx").hide();
     $("._def").show();
-    $(".popup__textarea").remove();
+    setTimeout(function textareaRemove() {
+      $(".popup__textarea").remove();
+    }, 500);
     e.preventDefault();
   });
+
   $(".write__review").click(function (e) {
     $(".telephone").after(reviewArea);
     showForm();

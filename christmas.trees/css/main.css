@@ -4591,7 +4591,7 @@ section div picture {
   padding-top: 60px
 }
 .section__decoration {
-  padding-top: 120px;
+  padding-top: 70px;
   padding-bottom: 90px
 }
 .section__decoration-img {
@@ -4650,7 +4650,10 @@ section div picture {
   width: 190px
 }
 .btn-popup__btn {
-  width: 100%
+  width: 100%;
+  display: block;
+  padding: 15px 0;
+  text-align: center
 }
 .btn__active {
   color: #383838;
@@ -5211,7 +5214,7 @@ section div picture {
 }
 .footer {
   color: #fff;
-  padding-top: 42px;
+  padding-top: 40px;
   padding-bottom: 40px;
   background: #2d2d2d
 }
@@ -5496,9 +5499,11 @@ section div picture {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2
+  z-index: 2000;
+  pointer-events: none
 }
 #particles-js canvas {
+  pointer-events: none;
   z-index: 200
 }
 ._def {
@@ -5624,7 +5629,9 @@ section div picture {
     bottom: -31px
   }
   .section__catalog {
-    padding-bottom: 55px
+    padding-bottom: 55px;
+    padding-top: 100px;
+    margin-top: -80px
   }
   .section__about {
     padding-top: 55px
@@ -5706,14 +5713,23 @@ section div picture {
     width: 300px;
     right: -30px
   }
+  .section__top {
+    justify-content: flex-start;
+    padding-top: 0;
+    background-position: 60%;
+    height: 330px
+  }
   .section__about {
-    padding-top: 0
+    padding-top: 70px
   }
   .btn,
   .btn__active {
     height: 30px;
     min-height: 30px;
     width: 116px
+  }
+  .btn-popup__btn {
+    padding: 9px 0
   }
   .catalog__slider-item,
   .decoration__grid-item {
@@ -5895,7 +5911,7 @@ screen and (max-height:300px) {
   }
   .section__catalog {
     padding-bottom: 60px;
-    margin-top: 0;
+    margin-top: -40px;
     margin-bottom: -40px
   }
   .section__about {
@@ -5918,6 +5934,9 @@ screen and (max-height:300px) {
     height: 30px;
     min-height: 30px;
     width: 116px
+  }
+  .btn-popup__btn {
+    padding: 9px 0
   }
   .top__content-text {
     margin-bottom: 20px
@@ -5968,8 +5987,32 @@ screen and (max-height:300px) {
   .reviews__slider-prev {
     left: 37%
   }
+  .footer-logo {
+    margin-bottom: 25px
+  }
+  .footer-menu {
+    flex-direction: column;
+    margin-bottom: 25px
+  }
+  .footer-menu a {
+    margin-bottom: 15px
+  }
+  .footer-menu a:last-child {
+    margin-bottom: 0
+  }
+  .footer-content {
+    width: 100%
+  }
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px
+  }
   .popup__form {
     padding: 70px 20px
+  }
+  .popup__input {
+    min-height: 40px;
+    height: 40px
   }
   .menu__bg {
     top: 113px
