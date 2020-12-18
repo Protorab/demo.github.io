@@ -1,0 +1,42 @@
+
+<div class="popup__rates popup animate__animated">
+  <div class="popup__overlay overlay overlay-popup__overlay"></div>
+  <div class="popup__more animate__animated" action="">
+    <div class="close project__close"><span></span></div>
+    <div class="popup__more-side">
+      <div class="popup__more-img"><img src="" alt=""/></div>
+      <div class="popup__more-detail"></div>
+    </div>
+    <div class="popup__more-main">
+      <h5 class="popup__more-title">Кому подходит:</h5>
+      <div class="popup__more-text" id="rates__list"></div>
+      <h5 class="popup__more-title">Особенности разработки</h5>
+      <div class="popup__more-text" id="development__text"></div>
+      <h5 class="popup__more-title">Особенности продвижения</h5>
+      <div class="popup__more-text" id="advancing__text"></div><a class="btn btn-rates__btn show__form" href="#" data-subject="Хочу заказать - Landing Page">Заказать</a>
+    </div>
+  </div>
+</div>
+<div class="popup__form popup animate__animated">
+  <div class="popup__overlay overlay overlay-popup__overlay"></div>
+  <form class="send__form form__popup animate__animated" action="">
+    <div class="close close__form"><span></span></div>
+    <input type="hidden" name="project_name" value="Site Name"/>
+    <input type="hidden" name="admin_email" value="admin@mail.com"/>
+    <input id="popup__subject" type="hidden" name="form_subject" value="Form Subject"/>
+    <input class="form__popup-input" required="required" placeholder="Введите имя" type="text" name="Имя"/>
+    <input class="form__popup-input telephone" required="required" placeholder="Введите телефон" type="phone" name="Телефон"/>
+    <input class="form__popup-input" required="required" placeholder="Введите e-mail" type="email" name="E-mail"/>
+    <textarea class="form__popup-input form__popup-textarea" name="Сообщение" cols="30" rows="10" placeholder="Введите текст"></textarea>
+    <input id="popup__form-submit" type="submit"/>
+    <label class="btn-popup__btn btn" for="popup__form-submit">Отправить</label>
+  </form>
+</div>
+<div class="popup__project popup animate__animated">
+  <div class="popup__overlay overlay overlay-popup__overlay"></div>
+  <div class="project__preview animate__animated" action="">
+    <div class="close project__close"><span></span></div><img class="project__img" id="project__img" src="" alt=""/>
+  </div>
+</div>
+<script src="https://kit.fontawesome.com/e272fd0660.js" crossorigin="anonymous"></script>
+<script src="js/main.min.js"></script>
