@@ -1,0 +1,53 @@
+<!-- @format -->
+
+<footer>
+  <div class="wrapper"></div>
+</footer>
+<script src="js/main.min.js"></script>
+<script async src="https://kit.fontawesome.com/e272fd0660.js"></script>
+<!-- @format -->
+
+<div id="popup__form" class="popup modal__window popup--form animate__animated">
+  <div class="popup__overlay close__popup"></div>
+  <form class="send__form form__popup animate__animated">
+    <div class="close close__popup">
+      <span></span>
+    </div>
+
+    <input
+      required
+      name="name"
+      placeholder="Введите имя"
+      type="text"
+      class="form__popup-input"
+    />
+    <input
+      required
+      name="phone"
+      placeholder="Введите телефон"
+      type="tel"
+      class="form__popup-input telephone"
+    />
+    <input
+      required
+      name="email"
+      placeholder="Введите e-mail"
+      type="email"
+      class="form__popup-input"
+    />
+
+    <label for="popup__form-submit" class="form__popup-btn btn">
+      Отправить
+    </label>
+
+    <input
+      value="Отправить"
+      type="submit"
+      value=""
+      class="form__popup-btn btn"
+      id="popup__form-submit"
+    />
+    <button class="form__popup-btn btn" type="submit">Отправить</button>
+  </form>
+</div>
+
